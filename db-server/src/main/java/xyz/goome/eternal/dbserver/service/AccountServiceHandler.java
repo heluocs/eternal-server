@@ -23,7 +23,7 @@ public class AccountServiceHandler implements AccountService.Iface {
         Account obj = new Account();
         obj.setAccount(account);
         obj.setPassword(password);
-        obj.setAuthId("123121");
+        obj.setAuthId("9335");
         obj.setServerId(1);
         Result result = new Result();
         if(obj == null) {
