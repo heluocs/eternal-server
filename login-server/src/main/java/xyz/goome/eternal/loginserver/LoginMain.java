@@ -15,7 +15,7 @@ public class LoginMain {
 
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("classpath:spring-*.xml");
-        new LoginServer(8080).run();
+        new LoginServer(8888).run();
     }
 
 }

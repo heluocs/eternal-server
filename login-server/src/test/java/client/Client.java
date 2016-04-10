@@ -17,7 +17,7 @@ import xyz.goome.eternal.common.message.AccountMessage;
 public class Client {
 
     public static void main(String[] args) {
-        new Client("localhost", 8080).run();
+        new Client("localhost", 8888).run();
     }
 
     private final String host;
