@@ -53,7 +53,7 @@ public class Client {
     private void sendMessage(Channel channel) {
         AccountMessage.MsgAccountLoginRequest request = AccountMessage.MsgAccountLoginRequest.newBuilder()
                 .setAccount("eternal")
-                .setPassword("21212112")
+                .setPassword("123456")
                 .build();
 
         byte[] body = request.toByteArray();
