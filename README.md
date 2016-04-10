@@ -1,0 +1,2 @@
+# eternal-server
+game server
