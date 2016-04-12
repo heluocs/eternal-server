@@ -5,7 +5,6 @@
          http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="thriftClient" class="xyz.goome.eternal.loginserver.rpc.ThriftClient" init-method="init" destroy-method="close">
-        <property name="port" value="8081" />
         <property name="serviceMap">
             <map>
                 <entry key="AccountService">
