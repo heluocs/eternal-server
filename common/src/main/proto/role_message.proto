@@ -1,0 +1,45 @@
+option java_outer_classname = "RoleMessage";
+
+message MsgRole {
+    required int32 roleid              = 1;
+    required string nickname           = 2;
+    required int32 level               = 3;
+    required int32 race                = 4;
+    required int32 sceneid             = 5;
+}
+
+//MSG_ROLE_LIST_REQUEST_C2S
+message MsgRoleListRequest {
+    required string authid              = 1;
+    required int32 serverid             = 2;
+}
+
+//MSG_ROLE_LIST_RESPONSE_S2C
+message MsgRoleListResponse {
+    repeated MsgRole roles              = 1;
+}
+
+//MSG_ROLE_CREATE_REQUEST_C2S
+message MsgRoleCreateRequest {
+    required string authid              = 1;
+    required int32 serverid             = 2;
+    required int32 race                 = 3;
+    required string nickname            = 4;
+}
+
+//MSG_ROLE_CREATE_RESPONSE_S2C
+message MsgRoleCreateResponse {
+    required bool success               = 1;
+    required int32 retcode              = 2;
+}
+
+//MSG_ROLE_DELETE_REQUEST_C2S
+message MsgRoleDeleteRequest {
+    required int32 roleid               = 1;
+}
+
+//MSG_ROLE_DELETE_REQUEST_S2C
+message MsgRoleDeleteResponse {
+    required bool success               = 1;
+    required int32 retcode              = 2;
+}

@@ -18,9 +18,8 @@ public interface AccountDao {
     /**
      * 创建账号
      * @param account
-     * @param password
      * @return
      */
-    public Account createAccount(String account, String password);
+    public int addAccount(Account account);
 
 }

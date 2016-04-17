@@ -1,12 +1,5 @@
 option java_outer_classname = "AccountMessage";
 
-message MsgGateServer
-{
-	required string name				= 1;
-	required string ip					= 2;
-	required int32 port					= 3;
-}
-
 //MSG_ACCOUNT_LOGIN_REQUEST_C2S
 message MsgAccountLoginRequest
 {
@@ -19,8 +12,8 @@ message MsgAccountLoginResponse
 {
 	required bool success				= 1;
 	required int32 retcode				= 2;
-	required int64 authid				= 3;
-	repeated MsgGateServer servers		= 4; 
+	required string authid				= 3;
+    required int32 currServId           = 4;
 }
 
 //MSG_ACCOUNT_REGIST_REQUEST_C2S
@@ -35,7 +28,7 @@ message MsgAccountRegistResponse
 {
 	required bool success				= 1;
 	required int32 retcode				= 2;
-	required int64 authid				= 3;
-	repeated MsgGateServer servers		= 4;
+	required string authid				= 3;
+    required int32 currServId           = 4;
 }
 

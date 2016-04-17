@@ -6,741 +6,6 @@ public final class AccountMessage {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface MsgGateServerOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:MsgGateServer)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>required string name = 1;</code>
-     */
-    boolean hasName();
-    /**
-     * <code>required string name = 1;</code>
-     */
-    String getName();
-    /**
-     * <code>required string name = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-
-    /**
-     * <code>required string ip = 2;</code>
-     */
-    boolean hasIp();
-    /**
-     * <code>required string ip = 2;</code>
-     */
-    String getIp();
-    /**
-     * <code>required string ip = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getIpBytes();
-
-    /**
-     * <code>required int32 port = 3;</code>
-     */
-    boolean hasPort();
-    /**
-     * <code>required int32 port = 3;</code>
-     */
-    int getPort();
-  }
-  /**
-   * Protobuf type {@code MsgGateServer}
-   */
-  public static final class MsgGateServer extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:MsgGateServer)
-      MsgGateServerOrBuilder {
-    // Use MsgGateServer.newBuilder() to construct.
-    private MsgGateServer(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private MsgGateServer(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final MsgGateServer defaultInstance;
-    public static MsgGateServer getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public MsgGateServer getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private MsgGateServer(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000001;
-              name_ = bs;
-              break;
-            }
-            case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000002;
-              ip_ = bs;
-              break;
-            }
-            case 24: {
-              bitField0_ |= 0x00000004;
-              port_ = input.readInt32();
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return AccountMessage.internal_static_MsgGateServer_descriptor;
-    }
-
-    protected FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return AccountMessage.internal_static_MsgGateServer_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              MsgGateServer.class, Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<MsgGateServer> PARSER =
-        new com.google.protobuf.AbstractParser<MsgGateServer>() {
-      public MsgGateServer parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new MsgGateServer(input, extensionRegistry);
-      }
-    };
-
-    @Override
-    public com.google.protobuf.Parser<MsgGateServer> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    public static final int NAME_FIELD_NUMBER = 1;
-    private Object name_;
-    /**
-     * <code>required string name = 1;</code>
-     */
-    public boolean hasName() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>required string name = 1;</code>
-     */
-    public String getName() {
-      Object ref = name_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          name_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>required string name = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      Object ref = name_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int IP_FIELD_NUMBER = 2;
-    private Object ip_;
-    /**
-     * <code>required string ip = 2;</code>
-     */
-    public boolean hasIp() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>required string ip = 2;</code>
-     */
-    public String getIp() {
-      Object ref = ip_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          ip_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>required string ip = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getIpBytes() {
-      Object ref = ip_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
-        ip_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int PORT_FIELD_NUMBER = 3;
-    private int port_;
-    /**
-     * <code>required int32 port = 3;</code>
-     */
-    public boolean hasPort() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>required int32 port = 3;</code>
-     */
-    public int getPort() {
-      return port_;
-    }
-
-    private void initFields() {
-      name_ = "";
-      ip_ = "";
-      port_ = 0;
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      if (!hasName()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasIp()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasPort()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(1, getNameBytes());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, getIpBytes());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeInt32(3, port_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getNameBytes());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getIpBytes());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, port_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @Override
-    protected Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static MsgGateServer parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static MsgGateServer parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static MsgGateServer parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static MsgGateServer parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static MsgGateServer parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static MsgGateServer parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static MsgGateServer parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static MsgGateServer parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static MsgGateServer parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static MsgGateServer parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(MsgGateServer prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @Override
-    protected Builder newBuilderForType(
-        BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code MsgGateServer}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:MsgGateServer)
-        MsgGateServerOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return AccountMessage.internal_static_MsgGateServer_descriptor;
-      }
-
-      protected FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return AccountMessage.internal_static_MsgGateServer_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                MsgGateServer.class, Builder.class);
-      }
-
-      // Construct using AccountMessage.MsgGateServer.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        name_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
-        ip_ = "";
-        bitField0_ = (bitField0_ & ~0x00000002);
-        port_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000004);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return AccountMessage.internal_static_MsgGateServer_descriptor;
-      }
-
-      public MsgGateServer getDefaultInstanceForType() {
-        return MsgGateServer.getDefaultInstance();
-      }
-
-      public MsgGateServer build() {
-        MsgGateServer result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public MsgGateServer buildPartial() {
-        MsgGateServer result = new MsgGateServer(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.name_ = name_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.ip_ = ip_;
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        result.port_ = port_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof MsgGateServer) {
-          return mergeFrom((MsgGateServer)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(MsgGateServer other) {
-        if (other == MsgGateServer.getDefaultInstance()) return this;
-        if (other.hasName()) {
-          bitField0_ |= 0x00000001;
-          name_ = other.name_;
-          onChanged();
-        }
-        if (other.hasIp()) {
-          bitField0_ |= 0x00000002;
-          ip_ = other.ip_;
-          onChanged();
-        }
-        if (other.hasPort()) {
-          setPort(other.getPort());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        if (!hasName()) {
-          
-          return false;
-        }
-        if (!hasIp()) {
-          
-          return false;
-        }
-        if (!hasPort()) {
-          
-          return false;
-        }
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        MsgGateServer parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (MsgGateServer) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private Object name_ = "";
-      /**
-       * <code>required string name = 1;</code>
-       */
-      public boolean hasName() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>required string name = 1;</code>
-       */
-      public String getName() {
-        Object ref = name_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            name_ = s;
-          }
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <code>required string name = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>required string name = 1;</code>
-       */
-      public Builder setName(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string name = 1;</code>
-       */
-      public Builder clearName() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string name = 1;</code>
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        name_ = value;
-        onChanged();
-        return this;
-      }
-
-      private Object ip_ = "";
-      /**
-       * <code>required string ip = 2;</code>
-       */
-      public boolean hasIp() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>required string ip = 2;</code>
-       */
-      public String getIp() {
-        Object ref = ip_;
-        if (!(ref instanceof String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            ip_ = s;
-          }
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      /**
-       * <code>required string ip = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getIpBytes() {
-        Object ref = ip_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
-          ip_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>required string ip = 2;</code>
-       */
-      public Builder setIp(
-          String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        ip_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string ip = 2;</code>
-       */
-      public Builder clearIp() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        ip_ = getDefaultInstance().getIp();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string ip = 2;</code>
-       */
-      public Builder setIpBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        ip_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int port_ ;
-      /**
-       * <code>required int32 port = 3;</code>
-       */
-      public boolean hasPort() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>required int32 port = 3;</code>
-       */
-      public int getPort() {
-        return port_;
-      }
-      /**
-       * <code>required int32 port = 3;</code>
-       */
-      public Builder setPort(int value) {
-        bitField0_ |= 0x00000004;
-        port_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required int32 port = 3;</code>
-       */
-      public Builder clearPort() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        port_ = 0;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:MsgGateServer)
-    }
-
-    static {
-      defaultInstance = new MsgGateServer(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:MsgGateServer)
-  }
-
   public interface MsgAccountLoginRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:MsgAccountLoginRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -752,7 +17,7 @@ public final class AccountMessage {
     /**
      * <code>required string account = 1;</code>
      */
-    String getAccount();
+    java.lang.String getAccount();
     /**
      * <code>required string account = 1;</code>
      */
@@ -766,7 +31,7 @@ public final class AccountMessage {
     /**
      * <code>required string password = 2;</code>
      */
-    String getPassword();
+    java.lang.String getPassword();
     /**
      * <code>required string password = 2;</code>
      */
@@ -801,7 +66,7 @@ public final class AccountMessage {
     }
 
     private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
@@ -858,11 +123,11 @@ public final class AccountMessage {
       return AccountMessage.internal_static_MsgAccountLoginRequest_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return AccountMessage.internal_static_MsgAccountLoginRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              MsgAccountLoginRequest.class, Builder.class);
+              AccountMessage.MsgAccountLoginRequest.class, AccountMessage.MsgAccountLoginRequest.Builder.class);
     }
 
     public static com.google.protobuf.Parser<MsgAccountLoginRequest> PARSER =
@@ -875,14 +140,14 @@ public final class AccountMessage {
       }
     };
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<MsgAccountLoginRequest> getParserForType() {
       return PARSER;
     }
 
     private int bitField0_;
     public static final int ACCOUNT_FIELD_NUMBER = 1;
-    private Object account_;
+    private java.lang.Object account_;
     /**
      * <code>required string account = 1;</code>
      */
@@ -892,14 +157,14 @@ public final class AccountMessage {
     /**
      * <code>required string account = 1;</code>
      */
-    public String getAccount() {
-      Object ref = account_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getAccount() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           account_ = s;
         }
@@ -911,11 +176,11 @@ public final class AccountMessage {
      */
     public com.google.protobuf.ByteString
         getAccountBytes() {
-      Object ref = account_;
-      if (ref instanceof String) {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         account_ = b;
         return b;
       } else {
@@ -924,7 +189,7 @@ public final class AccountMessage {
     }
 
     public static final int PASSWORD_FIELD_NUMBER = 2;
-    private Object password_;
+    private java.lang.Object password_;
     /**
      * <code>required string password = 2;</code>
      */
@@ -934,14 +199,14 @@ public final class AccountMessage {
     /**
      * <code>required string password = 2;</code>
      */
-    public String getPassword() {
-      Object ref = password_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getPassword() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           password_ = s;
         }
@@ -953,11 +218,11 @@ public final class AccountMessage {
      */
     public com.google.protobuf.ByteString
         getPasswordBytes() {
-      Object ref = password_;
-      if (ref instanceof String) {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         password_ = b;
         return b;
       } else {
@@ -1019,59 +284,59 @@ public final class AccountMessage {
     }
 
     private static final long serialVersionUID = 0L;
-    @Override
-    protected Object writeReplace()
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
 
-    public static MsgAccountLoginRequest parseFrom(
+    public static AccountMessage.MsgAccountLoginRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static MsgAccountLoginRequest parseFrom(
+    public static AccountMessage.MsgAccountLoginRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static MsgAccountLoginRequest parseFrom(byte[] data)
+    public static AccountMessage.MsgAccountLoginRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static MsgAccountLoginRequest parseFrom(
+    public static AccountMessage.MsgAccountLoginRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static MsgAccountLoginRequest parseFrom(java.io.InputStream input)
+    public static AccountMessage.MsgAccountLoginRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static MsgAccountLoginRequest parseFrom(
+    public static AccountMessage.MsgAccountLoginRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static MsgAccountLoginRequest parseDelimitedFrom(java.io.InputStream input)
+    public static AccountMessage.MsgAccountLoginRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static MsgAccountLoginRequest parseDelimitedFrom(
+    public static AccountMessage.MsgAccountLoginRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static MsgAccountLoginRequest parseFrom(
+    public static AccountMessage.MsgAccountLoginRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static MsgAccountLoginRequest parseFrom(
+    public static AccountMessage.MsgAccountLoginRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1080,14 +345,14 @@ public final class AccountMessage {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(MsgAccountLoginRequest prototype) {
+    public static Builder newBuilder(AccountMessage.MsgAccountLoginRequest prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1101,17 +366,17 @@ public final class AccountMessage {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:MsgAccountLoginRequest)
-        MsgAccountLoginRequestOrBuilder {
+        AccountMessage.MsgAccountLoginRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return AccountMessage.internal_static_MsgAccountLoginRequest_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return AccountMessage.internal_static_MsgAccountLoginRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                MsgAccountLoginRequest.class, Builder.class);
+                AccountMessage.MsgAccountLoginRequest.class, AccountMessage.MsgAccountLoginRequest.Builder.class);
       }
 
       // Construct using AccountMessage.MsgAccountLoginRequest.newBuilder()
@@ -1120,7 +385,7 @@ public final class AccountMessage {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1150,20 +415,20 @@ public final class AccountMessage {
         return AccountMessage.internal_static_MsgAccountLoginRequest_descriptor;
       }
 
-      public MsgAccountLoginRequest getDefaultInstanceForType() {
-        return MsgAccountLoginRequest.getDefaultInstance();
+      public AccountMessage.MsgAccountLoginRequest getDefaultInstanceForType() {
+        return AccountMessage.MsgAccountLoginRequest.getDefaultInstance();
       }
 
-      public MsgAccountLoginRequest build() {
-        MsgAccountLoginRequest result = buildPartial();
+      public AccountMessage.MsgAccountLoginRequest build() {
+        AccountMessage.MsgAccountLoginRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public MsgAccountLoginRequest buildPartial() {
-        MsgAccountLoginRequest result = new MsgAccountLoginRequest(this);
+      public AccountMessage.MsgAccountLoginRequest buildPartial() {
+        AccountMessage.MsgAccountLoginRequest result = new AccountMessage.MsgAccountLoginRequest(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1180,16 +445,16 @@ public final class AccountMessage {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof MsgAccountLoginRequest) {
-          return mergeFrom((MsgAccountLoginRequest)other);
+        if (other instanceof AccountMessage.MsgAccountLoginRequest) {
+          return mergeFrom((AccountMessage.MsgAccountLoginRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(MsgAccountLoginRequest other) {
-        if (other == MsgAccountLoginRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(AccountMessage.MsgAccountLoginRequest other) {
+        if (other == AccountMessage.MsgAccountLoginRequest.getDefaultInstance()) return this;
         if (other.hasAccount()) {
           bitField0_ |= 0x00000001;
           account_ = other.account_;
@@ -1220,11 +485,11 @@ public final class AccountMessage {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        MsgAccountLoginRequest parsedMessage = null;
+        AccountMessage.MsgAccountLoginRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (MsgAccountLoginRequest) e.getUnfinishedMessage();
+          parsedMessage = (AccountMessage.MsgAccountLoginRequest) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -1235,7 +500,7 @@ public final class AccountMessage {
       }
       private int bitField0_;
 
-      private Object account_ = "";
+      private java.lang.Object account_ = "";
       /**
        * <code>required string account = 1;</code>
        */
@@ -1245,18 +510,18 @@ public final class AccountMessage {
       /**
        * <code>required string account = 1;</code>
        */
-      public String getAccount() {
-        Object ref = account_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getAccount() {
+        java.lang.Object ref = account_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             account_ = s;
           }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -1264,11 +529,11 @@ public final class AccountMessage {
        */
       public com.google.protobuf.ByteString
           getAccountBytes() {
-        Object ref = account_;
+        java.lang.Object ref = account_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           account_ = b;
           return b;
         } else {
@@ -1279,7 +544,7 @@ public final class AccountMessage {
        * <code>required string account = 1;</code>
        */
       public Builder setAccount(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1311,7 +576,7 @@ public final class AccountMessage {
         return this;
       }
 
-      private Object password_ = "";
+      private java.lang.Object password_ = "";
       /**
        * <code>required string password = 2;</code>
        */
@@ -1321,18 +586,18 @@ public final class AccountMessage {
       /**
        * <code>required string password = 2;</code>
        */
-      public String getPassword() {
-        Object ref = password_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getPassword() {
+        java.lang.Object ref = password_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             password_ = s;
           }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -1340,11 +605,11 @@ public final class AccountMessage {
        */
       public com.google.protobuf.ByteString
           getPasswordBytes() {
-        Object ref = password_;
+        java.lang.Object ref = password_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           password_ = b;
           return b;
         } else {
@@ -1355,7 +620,7 @@ public final class AccountMessage {
        * <code>required string password = 2;</code>
        */
       public Builder setPassword(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1421,37 +686,27 @@ public final class AccountMessage {
     int getRetcode();
 
     /**
-     * <code>required int64 authid = 3;</code>
+     * <code>required string authid = 3;</code>
      */
     boolean hasAuthid();
     /**
-     * <code>required int64 authid = 3;</code>
+     * <code>required string authid = 3;</code>
      */
-    long getAuthid();
+    java.lang.String getAuthid();
+    /**
+     * <code>required string authid = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getAuthidBytes();
 
     /**
-     * <code>repeated .MsgGateServer servers = 4;</code>
+     * <code>required int32 currServId = 4;</code>
      */
-    java.util.List<MsgGateServer>
-        getServersList();
+    boolean hasCurrServId();
     /**
-     * <code>repeated .MsgGateServer servers = 4;</code>
+     * <code>required int32 currServId = 4;</code>
      */
-    MsgGateServer getServers(int index);
-    /**
-     * <code>repeated .MsgGateServer servers = 4;</code>
-     */
-    int getServersCount();
-    /**
-     * <code>repeated .MsgGateServer servers = 4;</code>
-     */
-    java.util.List<? extends MsgGateServerOrBuilder>
-        getServersOrBuilderList();
-    /**
-     * <code>repeated .MsgGateServer servers = 4;</code>
-     */
-    MsgGateServerOrBuilder getServersOrBuilder(
-            int index);
+    int getCurrServId();
   }
   /**
    * Protobuf type {@code MsgAccountLoginResponse}
@@ -1481,7 +736,7 @@ public final class AccountMessage {
     }
 
     private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
@@ -1519,17 +774,15 @@ public final class AccountMessage {
               retcode_ = input.readInt32();
               break;
             }
-            case 24: {
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
-              authid_ = input.readInt64();
+              authid_ = bs;
               break;
             }
-            case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-                servers_ = new java.util.ArrayList<MsgGateServer>();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              servers_.add(input.readMessage(MsgGateServer.PARSER, extensionRegistry));
+            case 32: {
+              bitField0_ |= 0x00000008;
+              currServId_ = input.readInt32();
               break;
             }
           }
@@ -1540,9 +793,6 @@ public final class AccountMessage {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-          servers_ = java.util.Collections.unmodifiableList(servers_);
-        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -1552,11 +802,11 @@ public final class AccountMessage {
       return AccountMessage.internal_static_MsgAccountLoginResponse_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return AccountMessage.internal_static_MsgAccountLoginResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              MsgAccountLoginResponse.class, Builder.class);
+              AccountMessage.MsgAccountLoginResponse.class, AccountMessage.MsgAccountLoginResponse.Builder.class);
     }
 
     public static com.google.protobuf.Parser<MsgAccountLoginResponse> PARSER =
@@ -1569,7 +819,7 @@ public final class AccountMessage {
       }
     };
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<MsgAccountLoginResponse> getParserForType() {
       return PARSER;
     }
@@ -1606,60 +856,67 @@ public final class AccountMessage {
     }
 
     public static final int AUTHID_FIELD_NUMBER = 3;
-    private long authid_;
+    private java.lang.Object authid_;
     /**
-     * <code>required int64 authid = 3;</code>
+     * <code>required string authid = 3;</code>
      */
     public boolean hasAuthid() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>required int64 authid = 3;</code>
+     * <code>required string authid = 3;</code>
      */
-    public long getAuthid() {
-      return authid_;
+    public java.lang.String getAuthid() {
+      java.lang.Object ref = authid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          authid_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string authid = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAuthidBytes() {
+      java.lang.Object ref = authid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
-    public static final int SERVERS_FIELD_NUMBER = 4;
-    private java.util.List<MsgGateServer> servers_;
+    public static final int CURRSERVID_FIELD_NUMBER = 4;
+    private int currServId_;
     /**
-     * <code>repeated .MsgGateServer servers = 4;</code>
+     * <code>required int32 currServId = 4;</code>
      */
-    public java.util.List<MsgGateServer> getServersList() {
-      return servers_;
+    public boolean hasCurrServId() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>repeated .MsgGateServer servers = 4;</code>
+     * <code>required int32 currServId = 4;</code>
      */
-    public java.util.List<? extends MsgGateServerOrBuilder>
-        getServersOrBuilderList() {
-      return servers_;
-    }
-    /**
-     * <code>repeated .MsgGateServer servers = 4;</code>
-     */
-    public int getServersCount() {
-      return servers_.size();
-    }
-    /**
-     * <code>repeated .MsgGateServer servers = 4;</code>
-     */
-    public MsgGateServer getServers(int index) {
-      return servers_.get(index);
-    }
-    /**
-     * <code>repeated .MsgGateServer servers = 4;</code>
-     */
-    public MsgGateServerOrBuilder getServersOrBuilder(
-        int index) {
-      return servers_.get(index);
+    public int getCurrServId() {
+      return currServId_;
     }
 
     private void initFields() {
       success_ = false;
       retcode_ = 0;
-      authid_ = 0L;
-      servers_ = java.util.Collections.emptyList();
+      authid_ = "";
+      currServId_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1679,11 +936,9 @@ public final class AccountMessage {
         memoizedIsInitialized = 0;
         return false;
       }
-      for (int i = 0; i < getServersCount(); i++) {
-        if (!getServers(i).isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
+      if (!hasCurrServId()) {
+        memoizedIsInitialized = 0;
+        return false;
       }
       memoizedIsInitialized = 1;
       return true;
@@ -1699,10 +954,10 @@ public final class AccountMessage {
         output.writeInt32(2, retcode_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeInt64(3, authid_);
+        output.writeBytes(3, getAuthidBytes());
       }
-      for (int i = 0; i < servers_.size(); i++) {
-        output.writeMessage(4, servers_.get(i));
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt32(4, currServId_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1723,11 +978,11 @@ public final class AccountMessage {
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(3, authid_);
+          .computeBytesSize(3, getAuthidBytes());
       }
-      for (int i = 0; i < servers_.size(); i++) {
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, servers_.get(i));
+          .computeInt32Size(4, currServId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1735,59 +990,59 @@ public final class AccountMessage {
     }
 
     private static final long serialVersionUID = 0L;
-    @Override
-    protected Object writeReplace()
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
 
-    public static MsgAccountLoginResponse parseFrom(
+    public static AccountMessage.MsgAccountLoginResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static MsgAccountLoginResponse parseFrom(
+    public static AccountMessage.MsgAccountLoginResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static MsgAccountLoginResponse parseFrom(byte[] data)
+    public static AccountMessage.MsgAccountLoginResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static MsgAccountLoginResponse parseFrom(
+    public static AccountMessage.MsgAccountLoginResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static MsgAccountLoginResponse parseFrom(java.io.InputStream input)
+    public static AccountMessage.MsgAccountLoginResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static MsgAccountLoginResponse parseFrom(
+    public static AccountMessage.MsgAccountLoginResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static MsgAccountLoginResponse parseDelimitedFrom(java.io.InputStream input)
+    public static AccountMessage.MsgAccountLoginResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static MsgAccountLoginResponse parseDelimitedFrom(
+    public static AccountMessage.MsgAccountLoginResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static MsgAccountLoginResponse parseFrom(
+    public static AccountMessage.MsgAccountLoginResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static MsgAccountLoginResponse parseFrom(
+    public static AccountMessage.MsgAccountLoginResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1796,14 +1051,14 @@ public final class AccountMessage {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(MsgAccountLoginResponse prototype) {
+    public static Builder newBuilder(AccountMessage.MsgAccountLoginResponse prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1817,17 +1072,17 @@ public final class AccountMessage {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:MsgAccountLoginResponse)
-        MsgAccountLoginResponseOrBuilder {
+        AccountMessage.MsgAccountLoginResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return AccountMessage.internal_static_MsgAccountLoginResponse_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return AccountMessage.internal_static_MsgAccountLoginResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                MsgAccountLoginResponse.class, Builder.class);
+                AccountMessage.MsgAccountLoginResponse.class, AccountMessage.MsgAccountLoginResponse.Builder.class);
       }
 
       // Construct using AccountMessage.MsgAccountLoginResponse.newBuilder()
@@ -1836,13 +1091,12 @@ public final class AccountMessage {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getServersFieldBuilder();
         }
       }
       private static Builder create() {
@@ -1855,14 +1109,10 @@ public final class AccountMessage {
         bitField0_ = (bitField0_ & ~0x00000001);
         retcode_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
-        authid_ = 0L;
+        authid_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
-        if (serversBuilder_ == null) {
-          servers_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
-        } else {
-          serversBuilder_.clear();
-        }
+        currServId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -1875,20 +1125,20 @@ public final class AccountMessage {
         return AccountMessage.internal_static_MsgAccountLoginResponse_descriptor;
       }
 
-      public MsgAccountLoginResponse getDefaultInstanceForType() {
-        return MsgAccountLoginResponse.getDefaultInstance();
+      public AccountMessage.MsgAccountLoginResponse getDefaultInstanceForType() {
+        return AccountMessage.MsgAccountLoginResponse.getDefaultInstance();
       }
 
-      public MsgAccountLoginResponse build() {
-        MsgAccountLoginResponse result = buildPartial();
+      public AccountMessage.MsgAccountLoginResponse build() {
+        AccountMessage.MsgAccountLoginResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public MsgAccountLoginResponse buildPartial() {
-        MsgAccountLoginResponse result = new MsgAccountLoginResponse(this);
+      public AccountMessage.MsgAccountLoginResponse buildPartial() {
+        AccountMessage.MsgAccountLoginResponse result = new AccountMessage.MsgAccountLoginResponse(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1903,31 +1153,26 @@ public final class AccountMessage {
           to_bitField0_ |= 0x00000004;
         }
         result.authid_ = authid_;
-        if (serversBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
-            servers_ = java.util.Collections.unmodifiableList(servers_);
-            bitField0_ = (bitField0_ & ~0x00000008);
-          }
-          result.servers_ = servers_;
-        } else {
-          result.servers_ = serversBuilder_.build();
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
         }
+        result.currServId_ = currServId_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof MsgAccountLoginResponse) {
-          return mergeFrom((MsgAccountLoginResponse)other);
+        if (other instanceof AccountMessage.MsgAccountLoginResponse) {
+          return mergeFrom((AccountMessage.MsgAccountLoginResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(MsgAccountLoginResponse other) {
-        if (other == MsgAccountLoginResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(AccountMessage.MsgAccountLoginResponse other) {
+        if (other == AccountMessage.MsgAccountLoginResponse.getDefaultInstance()) return this;
         if (other.hasSuccess()) {
           setSuccess(other.getSuccess());
         }
@@ -1935,33 +1180,12 @@ public final class AccountMessage {
           setRetcode(other.getRetcode());
         }
         if (other.hasAuthid()) {
-          setAuthid(other.getAuthid());
+          bitField0_ |= 0x00000004;
+          authid_ = other.authid_;
+          onChanged();
         }
-        if (serversBuilder_ == null) {
-          if (!other.servers_.isEmpty()) {
-            if (servers_.isEmpty()) {
-              servers_ = other.servers_;
-              bitField0_ = (bitField0_ & ~0x00000008);
-            } else {
-              ensureServersIsMutable();
-              servers_.addAll(other.servers_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.servers_.isEmpty()) {
-            if (serversBuilder_.isEmpty()) {
-              serversBuilder_.dispose();
-              serversBuilder_ = null;
-              servers_ = other.servers_;
-              bitField0_ = (bitField0_ & ~0x00000008);
-              serversBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getServersFieldBuilder() : null;
-            } else {
-              serversBuilder_.addAllMessages(other.servers_);
-            }
-          }
+        if (other.hasCurrServId()) {
+          setCurrServId(other.getCurrServId());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -1980,11 +1204,9 @@ public final class AccountMessage {
           
           return false;
         }
-        for (int i = 0; i < getServersCount(); i++) {
-          if (!getServers(i).isInitialized()) {
-            
-            return false;
-          }
+        if (!hasCurrServId()) {
+          
+          return false;
         }
         return true;
       }
@@ -1993,11 +1215,11 @@ public final class AccountMessage {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        MsgAccountLoginResponse parsedMessage = null;
+        AccountMessage.MsgAccountLoginResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (MsgAccountLoginResponse) e.getUnfinishedMessage();
+          parsedMessage = (AccountMessage.MsgAccountLoginResponse) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -2072,276 +1294,112 @@ public final class AccountMessage {
         return this;
       }
 
-      private long authid_ ;
+      private java.lang.Object authid_ = "";
       /**
-       * <code>required int64 authid = 3;</code>
+       * <code>required string authid = 3;</code>
        */
       public boolean hasAuthid() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>required int64 authid = 3;</code>
+       * <code>required string authid = 3;</code>
        */
-      public long getAuthid() {
-        return authid_;
+      public java.lang.String getAuthid() {
+        java.lang.Object ref = authid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            authid_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>required int64 authid = 3;</code>
+       * <code>required string authid = 3;</code>
        */
-      public Builder setAuthid(long value) {
-        bitField0_ |= 0x00000004;
+      public com.google.protobuf.ByteString
+          getAuthidBytes() {
+        java.lang.Object ref = authid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string authid = 3;</code>
+       */
+      public Builder setAuthid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
         authid_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required int64 authid = 3;</code>
+       * <code>required string authid = 3;</code>
        */
       public Builder clearAuthid() {
         bitField0_ = (bitField0_ & ~0x00000004);
-        authid_ = 0L;
+        authid_ = getDefaultInstance().getAuthid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string authid = 3;</code>
+       */
+      public Builder setAuthidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        authid_ = value;
         onChanged();
         return this;
       }
 
-      private java.util.List<MsgGateServer> servers_ =
-        java.util.Collections.emptyList();
-      private void ensureServersIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
-          servers_ = new java.util.ArrayList<MsgGateServer>(servers_);
-          bitField0_ |= 0x00000008;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          MsgGateServer, MsgGateServer.Builder, MsgGateServerOrBuilder> serversBuilder_;
-
+      private int currServId_ ;
       /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
+       * <code>required int32 currServId = 4;</code>
        */
-      public java.util.List<MsgGateServer> getServersList() {
-        if (serversBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(servers_);
-        } else {
-          return serversBuilder_.getMessageList();
-        }
+      public boolean hasCurrServId() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
+       * <code>required int32 currServId = 4;</code>
        */
-      public int getServersCount() {
-        if (serversBuilder_ == null) {
-          return servers_.size();
-        } else {
-          return serversBuilder_.getCount();
-        }
+      public int getCurrServId() {
+        return currServId_;
       }
       /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
+       * <code>required int32 currServId = 4;</code>
        */
-      public MsgGateServer getServers(int index) {
-        if (serversBuilder_ == null) {
-          return servers_.get(index);
-        } else {
-          return serversBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public Builder setServers(
-          int index, MsgGateServer value) {
-        if (serversBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureServersIsMutable();
-          servers_.set(index, value);
-          onChanged();
-        } else {
-          serversBuilder_.setMessage(index, value);
-        }
+      public Builder setCurrServId(int value) {
+        bitField0_ |= 0x00000008;
+        currServId_ = value;
+        onChanged();
         return this;
       }
       /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
+       * <code>required int32 currServId = 4;</code>
        */
-      public Builder setServers(
-          int index, MsgGateServer.Builder builderForValue) {
-        if (serversBuilder_ == null) {
-          ensureServersIsMutable();
-          servers_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          serversBuilder_.setMessage(index, builderForValue.build());
-        }
+      public Builder clearCurrServId() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        currServId_ = 0;
+        onChanged();
         return this;
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public Builder addServers(MsgGateServer value) {
-        if (serversBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureServersIsMutable();
-          servers_.add(value);
-          onChanged();
-        } else {
-          serversBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public Builder addServers(
-          int index, MsgGateServer value) {
-        if (serversBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureServersIsMutable();
-          servers_.add(index, value);
-          onChanged();
-        } else {
-          serversBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public Builder addServers(
-          MsgGateServer.Builder builderForValue) {
-        if (serversBuilder_ == null) {
-          ensureServersIsMutable();
-          servers_.add(builderForValue.build());
-          onChanged();
-        } else {
-          serversBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public Builder addServers(
-          int index, MsgGateServer.Builder builderForValue) {
-        if (serversBuilder_ == null) {
-          ensureServersIsMutable();
-          servers_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          serversBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public Builder addAllServers(
-          Iterable<? extends MsgGateServer> values) {
-        if (serversBuilder_ == null) {
-          ensureServersIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, servers_);
-          onChanged();
-        } else {
-          serversBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public Builder clearServers() {
-        if (serversBuilder_ == null) {
-          servers_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
-          onChanged();
-        } else {
-          serversBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public Builder removeServers(int index) {
-        if (serversBuilder_ == null) {
-          ensureServersIsMutable();
-          servers_.remove(index);
-          onChanged();
-        } else {
-          serversBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public MsgGateServer.Builder getServersBuilder(
-          int index) {
-        return getServersFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public MsgGateServerOrBuilder getServersOrBuilder(
-          int index) {
-        if (serversBuilder_ == null) {
-          return servers_.get(index);  } else {
-          return serversBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public java.util.List<? extends MsgGateServerOrBuilder>
-           getServersOrBuilderList() {
-        if (serversBuilder_ != null) {
-          return serversBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(servers_);
-        }
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public MsgGateServer.Builder addServersBuilder() {
-        return getServersFieldBuilder().addBuilder(
-            MsgGateServer.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public MsgGateServer.Builder addServersBuilder(
-          int index) {
-        return getServersFieldBuilder().addBuilder(
-            index, MsgGateServer.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public java.util.List<MsgGateServer.Builder>
-           getServersBuilderList() {
-        return getServersFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          MsgGateServer, MsgGateServer.Builder, MsgGateServerOrBuilder>
-          getServersFieldBuilder() {
-        if (serversBuilder_ == null) {
-          serversBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              MsgGateServer, MsgGateServer.Builder, MsgGateServerOrBuilder>(
-                  servers_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
-                  getParentForChildren(),
-                  isClean());
-          servers_ = null;
-        }
-        return serversBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:MsgAccountLoginResponse)
@@ -2366,7 +1424,7 @@ public final class AccountMessage {
     /**
      * <code>required string account = 1;</code>
      */
-    String getAccount();
+    java.lang.String getAccount();
     /**
      * <code>required string account = 1;</code>
      */
@@ -2380,7 +1438,7 @@ public final class AccountMessage {
     /**
      * <code>required string password = 2;</code>
      */
-    String getPassword();
+    java.lang.String getPassword();
     /**
      * <code>required string password = 2;</code>
      */
@@ -2415,7 +1473,7 @@ public final class AccountMessage {
     }
 
     private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
@@ -2472,11 +1530,11 @@ public final class AccountMessage {
       return AccountMessage.internal_static_MsgAccountRegistRequest_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return AccountMessage.internal_static_MsgAccountRegistRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              MsgAccountRegistRequest.class, Builder.class);
+              AccountMessage.MsgAccountRegistRequest.class, AccountMessage.MsgAccountRegistRequest.Builder.class);
     }
 
     public static com.google.protobuf.Parser<MsgAccountRegistRequest> PARSER =
@@ -2489,14 +1547,14 @@ public final class AccountMessage {
       }
     };
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<MsgAccountRegistRequest> getParserForType() {
       return PARSER;
     }
 
     private int bitField0_;
     public static final int ACCOUNT_FIELD_NUMBER = 1;
-    private Object account_;
+    private java.lang.Object account_;
     /**
      * <code>required string account = 1;</code>
      */
@@ -2506,14 +1564,14 @@ public final class AccountMessage {
     /**
      * <code>required string account = 1;</code>
      */
-    public String getAccount() {
-      Object ref = account_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getAccount() {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           account_ = s;
         }
@@ -2525,11 +1583,11 @@ public final class AccountMessage {
      */
     public com.google.protobuf.ByteString
         getAccountBytes() {
-      Object ref = account_;
-      if (ref instanceof String) {
+      java.lang.Object ref = account_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         account_ = b;
         return b;
       } else {
@@ -2538,7 +1596,7 @@ public final class AccountMessage {
     }
 
     public static final int PASSWORD_FIELD_NUMBER = 2;
-    private Object password_;
+    private java.lang.Object password_;
     /**
      * <code>required string password = 2;</code>
      */
@@ -2548,14 +1606,14 @@ public final class AccountMessage {
     /**
      * <code>required string password = 2;</code>
      */
-    public String getPassword() {
-      Object ref = password_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getPassword() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           password_ = s;
         }
@@ -2567,11 +1625,11 @@ public final class AccountMessage {
      */
     public com.google.protobuf.ByteString
         getPasswordBytes() {
-      Object ref = password_;
-      if (ref instanceof String) {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         password_ = b;
         return b;
       } else {
@@ -2633,59 +1691,59 @@ public final class AccountMessage {
     }
 
     private static final long serialVersionUID = 0L;
-    @Override
-    protected Object writeReplace()
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
 
-    public static MsgAccountRegistRequest parseFrom(
+    public static AccountMessage.MsgAccountRegistRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static MsgAccountRegistRequest parseFrom(
+    public static AccountMessage.MsgAccountRegistRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static MsgAccountRegistRequest parseFrom(byte[] data)
+    public static AccountMessage.MsgAccountRegistRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static MsgAccountRegistRequest parseFrom(
+    public static AccountMessage.MsgAccountRegistRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static MsgAccountRegistRequest parseFrom(java.io.InputStream input)
+    public static AccountMessage.MsgAccountRegistRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static MsgAccountRegistRequest parseFrom(
+    public static AccountMessage.MsgAccountRegistRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static MsgAccountRegistRequest parseDelimitedFrom(java.io.InputStream input)
+    public static AccountMessage.MsgAccountRegistRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static MsgAccountRegistRequest parseDelimitedFrom(
+    public static AccountMessage.MsgAccountRegistRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static MsgAccountRegistRequest parseFrom(
+    public static AccountMessage.MsgAccountRegistRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static MsgAccountRegistRequest parseFrom(
+    public static AccountMessage.MsgAccountRegistRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2694,14 +1752,14 @@ public final class AccountMessage {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(MsgAccountRegistRequest prototype) {
+    public static Builder newBuilder(AccountMessage.MsgAccountRegistRequest prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -2715,17 +1773,17 @@ public final class AccountMessage {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:MsgAccountRegistRequest)
-        MsgAccountRegistRequestOrBuilder {
+        AccountMessage.MsgAccountRegistRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return AccountMessage.internal_static_MsgAccountRegistRequest_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return AccountMessage.internal_static_MsgAccountRegistRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                MsgAccountRegistRequest.class, Builder.class);
+                AccountMessage.MsgAccountRegistRequest.class, AccountMessage.MsgAccountRegistRequest.Builder.class);
       }
 
       // Construct using AccountMessage.MsgAccountRegistRequest.newBuilder()
@@ -2734,7 +1792,7 @@ public final class AccountMessage {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -2764,20 +1822,20 @@ public final class AccountMessage {
         return AccountMessage.internal_static_MsgAccountRegistRequest_descriptor;
       }
 
-      public MsgAccountRegistRequest getDefaultInstanceForType() {
-        return MsgAccountRegistRequest.getDefaultInstance();
+      public AccountMessage.MsgAccountRegistRequest getDefaultInstanceForType() {
+        return AccountMessage.MsgAccountRegistRequest.getDefaultInstance();
       }
 
-      public MsgAccountRegistRequest build() {
-        MsgAccountRegistRequest result = buildPartial();
+      public AccountMessage.MsgAccountRegistRequest build() {
+        AccountMessage.MsgAccountRegistRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public MsgAccountRegistRequest buildPartial() {
-        MsgAccountRegistRequest result = new MsgAccountRegistRequest(this);
+      public AccountMessage.MsgAccountRegistRequest buildPartial() {
+        AccountMessage.MsgAccountRegistRequest result = new AccountMessage.MsgAccountRegistRequest(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -2794,16 +1852,16 @@ public final class AccountMessage {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof MsgAccountRegistRequest) {
-          return mergeFrom((MsgAccountRegistRequest)other);
+        if (other instanceof AccountMessage.MsgAccountRegistRequest) {
+          return mergeFrom((AccountMessage.MsgAccountRegistRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(MsgAccountRegistRequest other) {
-        if (other == MsgAccountRegistRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(AccountMessage.MsgAccountRegistRequest other) {
+        if (other == AccountMessage.MsgAccountRegistRequest.getDefaultInstance()) return this;
         if (other.hasAccount()) {
           bitField0_ |= 0x00000001;
           account_ = other.account_;
@@ -2834,11 +1892,11 @@ public final class AccountMessage {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        MsgAccountRegistRequest parsedMessage = null;
+        AccountMessage.MsgAccountRegistRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (MsgAccountRegistRequest) e.getUnfinishedMessage();
+          parsedMessage = (AccountMessage.MsgAccountRegistRequest) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -2849,7 +1907,7 @@ public final class AccountMessage {
       }
       private int bitField0_;
 
-      private Object account_ = "";
+      private java.lang.Object account_ = "";
       /**
        * <code>required string account = 1;</code>
        */
@@ -2859,18 +1917,18 @@ public final class AccountMessage {
       /**
        * <code>required string account = 1;</code>
        */
-      public String getAccount() {
-        Object ref = account_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getAccount() {
+        java.lang.Object ref = account_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             account_ = s;
           }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -2878,11 +1936,11 @@ public final class AccountMessage {
        */
       public com.google.protobuf.ByteString
           getAccountBytes() {
-        Object ref = account_;
+        java.lang.Object ref = account_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           account_ = b;
           return b;
         } else {
@@ -2893,7 +1951,7 @@ public final class AccountMessage {
        * <code>required string account = 1;</code>
        */
       public Builder setAccount(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2925,7 +1983,7 @@ public final class AccountMessage {
         return this;
       }
 
-      private Object password_ = "";
+      private java.lang.Object password_ = "";
       /**
        * <code>required string password = 2;</code>
        */
@@ -2935,18 +1993,18 @@ public final class AccountMessage {
       /**
        * <code>required string password = 2;</code>
        */
-      public String getPassword() {
-        Object ref = password_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getPassword() {
+        java.lang.Object ref = password_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             password_ = s;
           }
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -2954,11 +2012,11 @@ public final class AccountMessage {
        */
       public com.google.protobuf.ByteString
           getPasswordBytes() {
-        Object ref = password_;
+        java.lang.Object ref = password_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           password_ = b;
           return b;
         } else {
@@ -2969,7 +2027,7 @@ public final class AccountMessage {
        * <code>required string password = 2;</code>
        */
       public Builder setPassword(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3035,37 +2093,27 @@ public final class AccountMessage {
     int getRetcode();
 
     /**
-     * <code>required int64 authid = 3;</code>
+     * <code>required string authid = 3;</code>
      */
     boolean hasAuthid();
     /**
-     * <code>required int64 authid = 3;</code>
+     * <code>required string authid = 3;</code>
      */
-    long getAuthid();
+    java.lang.String getAuthid();
+    /**
+     * <code>required string authid = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getAuthidBytes();
 
     /**
-     * <code>repeated .MsgGateServer servers = 4;</code>
+     * <code>required int32 currServId = 4;</code>
      */
-    java.util.List<MsgGateServer>
-        getServersList();
+    boolean hasCurrServId();
     /**
-     * <code>repeated .MsgGateServer servers = 4;</code>
+     * <code>required int32 currServId = 4;</code>
      */
-    MsgGateServer getServers(int index);
-    /**
-     * <code>repeated .MsgGateServer servers = 4;</code>
-     */
-    int getServersCount();
-    /**
-     * <code>repeated .MsgGateServer servers = 4;</code>
-     */
-    java.util.List<? extends MsgGateServerOrBuilder>
-        getServersOrBuilderList();
-    /**
-     * <code>repeated .MsgGateServer servers = 4;</code>
-     */
-    MsgGateServerOrBuilder getServersOrBuilder(
-            int index);
+    int getCurrServId();
   }
   /**
    * Protobuf type {@code MsgAccountRegistResponse}
@@ -3095,7 +2143,7 @@ public final class AccountMessage {
     }
 
     private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
@@ -3133,17 +2181,15 @@ public final class AccountMessage {
               retcode_ = input.readInt32();
               break;
             }
-            case 24: {
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
-              authid_ = input.readInt64();
+              authid_ = bs;
               break;
             }
-            case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-                servers_ = new java.util.ArrayList<MsgGateServer>();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              servers_.add(input.readMessage(MsgGateServer.PARSER, extensionRegistry));
+            case 32: {
+              bitField0_ |= 0x00000008;
+              currServId_ = input.readInt32();
               break;
             }
           }
@@ -3154,9 +2200,6 @@ public final class AccountMessage {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-          servers_ = java.util.Collections.unmodifiableList(servers_);
-        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -3166,11 +2209,11 @@ public final class AccountMessage {
       return AccountMessage.internal_static_MsgAccountRegistResponse_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return AccountMessage.internal_static_MsgAccountRegistResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              MsgAccountRegistResponse.class, Builder.class);
+              AccountMessage.MsgAccountRegistResponse.class, AccountMessage.MsgAccountRegistResponse.Builder.class);
     }
 
     public static com.google.protobuf.Parser<MsgAccountRegistResponse> PARSER =
@@ -3183,7 +2226,7 @@ public final class AccountMessage {
       }
     };
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<MsgAccountRegistResponse> getParserForType() {
       return PARSER;
     }
@@ -3220,60 +2263,67 @@ public final class AccountMessage {
     }
 
     public static final int AUTHID_FIELD_NUMBER = 3;
-    private long authid_;
+    private java.lang.Object authid_;
     /**
-     * <code>required int64 authid = 3;</code>
+     * <code>required string authid = 3;</code>
      */
     public boolean hasAuthid() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>required int64 authid = 3;</code>
+     * <code>required string authid = 3;</code>
      */
-    public long getAuthid() {
-      return authid_;
+    public java.lang.String getAuthid() {
+      java.lang.Object ref = authid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          authid_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string authid = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAuthidBytes() {
+      java.lang.Object ref = authid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
-    public static final int SERVERS_FIELD_NUMBER = 4;
-    private java.util.List<MsgGateServer> servers_;
+    public static final int CURRSERVID_FIELD_NUMBER = 4;
+    private int currServId_;
     /**
-     * <code>repeated .MsgGateServer servers = 4;</code>
+     * <code>required int32 currServId = 4;</code>
      */
-    public java.util.List<MsgGateServer> getServersList() {
-      return servers_;
+    public boolean hasCurrServId() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>repeated .MsgGateServer servers = 4;</code>
+     * <code>required int32 currServId = 4;</code>
      */
-    public java.util.List<? extends MsgGateServerOrBuilder>
-        getServersOrBuilderList() {
-      return servers_;
-    }
-    /**
-     * <code>repeated .MsgGateServer servers = 4;</code>
-     */
-    public int getServersCount() {
-      return servers_.size();
-    }
-    /**
-     * <code>repeated .MsgGateServer servers = 4;</code>
-     */
-    public MsgGateServer getServers(int index) {
-      return servers_.get(index);
-    }
-    /**
-     * <code>repeated .MsgGateServer servers = 4;</code>
-     */
-    public MsgGateServerOrBuilder getServersOrBuilder(
-        int index) {
-      return servers_.get(index);
+    public int getCurrServId() {
+      return currServId_;
     }
 
     private void initFields() {
       success_ = false;
       retcode_ = 0;
-      authid_ = 0L;
-      servers_ = java.util.Collections.emptyList();
+      authid_ = "";
+      currServId_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3293,11 +2343,9 @@ public final class AccountMessage {
         memoizedIsInitialized = 0;
         return false;
       }
-      for (int i = 0; i < getServersCount(); i++) {
-        if (!getServers(i).isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
+      if (!hasCurrServId()) {
+        memoizedIsInitialized = 0;
+        return false;
       }
       memoizedIsInitialized = 1;
       return true;
@@ -3313,10 +2361,10 @@ public final class AccountMessage {
         output.writeInt32(2, retcode_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeInt64(3, authid_);
+        output.writeBytes(3, getAuthidBytes());
       }
-      for (int i = 0; i < servers_.size(); i++) {
-        output.writeMessage(4, servers_.get(i));
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt32(4, currServId_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3337,11 +2385,11 @@ public final class AccountMessage {
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(3, authid_);
+          .computeBytesSize(3, getAuthidBytes());
       }
-      for (int i = 0; i < servers_.size(); i++) {
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, servers_.get(i));
+          .computeInt32Size(4, currServId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -3349,59 +2397,59 @@ public final class AccountMessage {
     }
 
     private static final long serialVersionUID = 0L;
-    @Override
-    protected Object writeReplace()
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
 
-    public static MsgAccountRegistResponse parseFrom(
+    public static AccountMessage.MsgAccountRegistResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static MsgAccountRegistResponse parseFrom(
+    public static AccountMessage.MsgAccountRegistResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static MsgAccountRegistResponse parseFrom(byte[] data)
+    public static AccountMessage.MsgAccountRegistResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static MsgAccountRegistResponse parseFrom(
+    public static AccountMessage.MsgAccountRegistResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static MsgAccountRegistResponse parseFrom(java.io.InputStream input)
+    public static AccountMessage.MsgAccountRegistResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static MsgAccountRegistResponse parseFrom(
+    public static AccountMessage.MsgAccountRegistResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static MsgAccountRegistResponse parseDelimitedFrom(java.io.InputStream input)
+    public static AccountMessage.MsgAccountRegistResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static MsgAccountRegistResponse parseDelimitedFrom(
+    public static AccountMessage.MsgAccountRegistResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static MsgAccountRegistResponse parseFrom(
+    public static AccountMessage.MsgAccountRegistResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static MsgAccountRegistResponse parseFrom(
+    public static AccountMessage.MsgAccountRegistResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3410,14 +2458,14 @@ public final class AccountMessage {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(MsgAccountRegistResponse prototype) {
+    public static Builder newBuilder(AccountMessage.MsgAccountRegistResponse prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -3431,17 +2479,17 @@ public final class AccountMessage {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:MsgAccountRegistResponse)
-        MsgAccountRegistResponseOrBuilder {
+        AccountMessage.MsgAccountRegistResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return AccountMessage.internal_static_MsgAccountRegistResponse_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return AccountMessage.internal_static_MsgAccountRegistResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                MsgAccountRegistResponse.class, Builder.class);
+                AccountMessage.MsgAccountRegistResponse.class, AccountMessage.MsgAccountRegistResponse.Builder.class);
       }
 
       // Construct using AccountMessage.MsgAccountRegistResponse.newBuilder()
@@ -3450,13 +2498,12 @@ public final class AccountMessage {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getServersFieldBuilder();
         }
       }
       private static Builder create() {
@@ -3469,14 +2516,10 @@ public final class AccountMessage {
         bitField0_ = (bitField0_ & ~0x00000001);
         retcode_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
-        authid_ = 0L;
+        authid_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
-        if (serversBuilder_ == null) {
-          servers_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
-        } else {
-          serversBuilder_.clear();
-        }
+        currServId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -3489,20 +2532,20 @@ public final class AccountMessage {
         return AccountMessage.internal_static_MsgAccountRegistResponse_descriptor;
       }
 
-      public MsgAccountRegistResponse getDefaultInstanceForType() {
-        return MsgAccountRegistResponse.getDefaultInstance();
+      public AccountMessage.MsgAccountRegistResponse getDefaultInstanceForType() {
+        return AccountMessage.MsgAccountRegistResponse.getDefaultInstance();
       }
 
-      public MsgAccountRegistResponse build() {
-        MsgAccountRegistResponse result = buildPartial();
+      public AccountMessage.MsgAccountRegistResponse build() {
+        AccountMessage.MsgAccountRegistResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public MsgAccountRegistResponse buildPartial() {
-        MsgAccountRegistResponse result = new MsgAccountRegistResponse(this);
+      public AccountMessage.MsgAccountRegistResponse buildPartial() {
+        AccountMessage.MsgAccountRegistResponse result = new AccountMessage.MsgAccountRegistResponse(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -3517,31 +2560,26 @@ public final class AccountMessage {
           to_bitField0_ |= 0x00000004;
         }
         result.authid_ = authid_;
-        if (serversBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
-            servers_ = java.util.Collections.unmodifiableList(servers_);
-            bitField0_ = (bitField0_ & ~0x00000008);
-          }
-          result.servers_ = servers_;
-        } else {
-          result.servers_ = serversBuilder_.build();
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
         }
+        result.currServId_ = currServId_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof MsgAccountRegistResponse) {
-          return mergeFrom((MsgAccountRegistResponse)other);
+        if (other instanceof AccountMessage.MsgAccountRegistResponse) {
+          return mergeFrom((AccountMessage.MsgAccountRegistResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(MsgAccountRegistResponse other) {
-        if (other == MsgAccountRegistResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(AccountMessage.MsgAccountRegistResponse other) {
+        if (other == AccountMessage.MsgAccountRegistResponse.getDefaultInstance()) return this;
         if (other.hasSuccess()) {
           setSuccess(other.getSuccess());
         }
@@ -3549,33 +2587,12 @@ public final class AccountMessage {
           setRetcode(other.getRetcode());
         }
         if (other.hasAuthid()) {
-          setAuthid(other.getAuthid());
+          bitField0_ |= 0x00000004;
+          authid_ = other.authid_;
+          onChanged();
         }
-        if (serversBuilder_ == null) {
-          if (!other.servers_.isEmpty()) {
-            if (servers_.isEmpty()) {
-              servers_ = other.servers_;
-              bitField0_ = (bitField0_ & ~0x00000008);
-            } else {
-              ensureServersIsMutable();
-              servers_.addAll(other.servers_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.servers_.isEmpty()) {
-            if (serversBuilder_.isEmpty()) {
-              serversBuilder_.dispose();
-              serversBuilder_ = null;
-              servers_ = other.servers_;
-              bitField0_ = (bitField0_ & ~0x00000008);
-              serversBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getServersFieldBuilder() : null;
-            } else {
-              serversBuilder_.addAllMessages(other.servers_);
-            }
-          }
+        if (other.hasCurrServId()) {
+          setCurrServId(other.getCurrServId());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -3594,11 +2611,9 @@ public final class AccountMessage {
           
           return false;
         }
-        for (int i = 0; i < getServersCount(); i++) {
-          if (!getServers(i).isInitialized()) {
-            
-            return false;
-          }
+        if (!hasCurrServId()) {
+          
+          return false;
         }
         return true;
       }
@@ -3607,11 +2622,11 @@ public final class AccountMessage {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        MsgAccountRegistResponse parsedMessage = null;
+        AccountMessage.MsgAccountRegistResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (MsgAccountRegistResponse) e.getUnfinishedMessage();
+          parsedMessage = (AccountMessage.MsgAccountRegistResponse) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -3686,276 +2701,112 @@ public final class AccountMessage {
         return this;
       }
 
-      private long authid_ ;
+      private java.lang.Object authid_ = "";
       /**
-       * <code>required int64 authid = 3;</code>
+       * <code>required string authid = 3;</code>
        */
       public boolean hasAuthid() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>required int64 authid = 3;</code>
+       * <code>required string authid = 3;</code>
        */
-      public long getAuthid() {
-        return authid_;
+      public java.lang.String getAuthid() {
+        java.lang.Object ref = authid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            authid_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>required int64 authid = 3;</code>
+       * <code>required string authid = 3;</code>
        */
-      public Builder setAuthid(long value) {
-        bitField0_ |= 0x00000004;
+      public com.google.protobuf.ByteString
+          getAuthidBytes() {
+        java.lang.Object ref = authid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string authid = 3;</code>
+       */
+      public Builder setAuthid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
         authid_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required int64 authid = 3;</code>
+       * <code>required string authid = 3;</code>
        */
       public Builder clearAuthid() {
         bitField0_ = (bitField0_ & ~0x00000004);
-        authid_ = 0L;
+        authid_ = getDefaultInstance().getAuthid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string authid = 3;</code>
+       */
+      public Builder setAuthidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        authid_ = value;
         onChanged();
         return this;
       }
 
-      private java.util.List<MsgGateServer> servers_ =
-        java.util.Collections.emptyList();
-      private void ensureServersIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
-          servers_ = new java.util.ArrayList<MsgGateServer>(servers_);
-          bitField0_ |= 0x00000008;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          MsgGateServer, MsgGateServer.Builder, MsgGateServerOrBuilder> serversBuilder_;
-
+      private int currServId_ ;
       /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
+       * <code>required int32 currServId = 4;</code>
        */
-      public java.util.List<MsgGateServer> getServersList() {
-        if (serversBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(servers_);
-        } else {
-          return serversBuilder_.getMessageList();
-        }
+      public boolean hasCurrServId() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
+       * <code>required int32 currServId = 4;</code>
        */
-      public int getServersCount() {
-        if (serversBuilder_ == null) {
-          return servers_.size();
-        } else {
-          return serversBuilder_.getCount();
-        }
+      public int getCurrServId() {
+        return currServId_;
       }
       /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
+       * <code>required int32 currServId = 4;</code>
        */
-      public MsgGateServer getServers(int index) {
-        if (serversBuilder_ == null) {
-          return servers_.get(index);
-        } else {
-          return serversBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public Builder setServers(
-          int index, MsgGateServer value) {
-        if (serversBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureServersIsMutable();
-          servers_.set(index, value);
-          onChanged();
-        } else {
-          serversBuilder_.setMessage(index, value);
-        }
+      public Builder setCurrServId(int value) {
+        bitField0_ |= 0x00000008;
+        currServId_ = value;
+        onChanged();
         return this;
       }
       /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
+       * <code>required int32 currServId = 4;</code>
        */
-      public Builder setServers(
-          int index, MsgGateServer.Builder builderForValue) {
-        if (serversBuilder_ == null) {
-          ensureServersIsMutable();
-          servers_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          serversBuilder_.setMessage(index, builderForValue.build());
-        }
+      public Builder clearCurrServId() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        currServId_ = 0;
+        onChanged();
         return this;
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public Builder addServers(MsgGateServer value) {
-        if (serversBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureServersIsMutable();
-          servers_.add(value);
-          onChanged();
-        } else {
-          serversBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public Builder addServers(
-          int index, MsgGateServer value) {
-        if (serversBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureServersIsMutable();
-          servers_.add(index, value);
-          onChanged();
-        } else {
-          serversBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public Builder addServers(
-          MsgGateServer.Builder builderForValue) {
-        if (serversBuilder_ == null) {
-          ensureServersIsMutable();
-          servers_.add(builderForValue.build());
-          onChanged();
-        } else {
-          serversBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public Builder addServers(
-          int index, MsgGateServer.Builder builderForValue) {
-        if (serversBuilder_ == null) {
-          ensureServersIsMutable();
-          servers_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          serversBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public Builder addAllServers(
-          Iterable<? extends MsgGateServer> values) {
-        if (serversBuilder_ == null) {
-          ensureServersIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, servers_);
-          onChanged();
-        } else {
-          serversBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public Builder clearServers() {
-        if (serversBuilder_ == null) {
-          servers_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
-          onChanged();
-        } else {
-          serversBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public Builder removeServers(int index) {
-        if (serversBuilder_ == null) {
-          ensureServersIsMutable();
-          servers_.remove(index);
-          onChanged();
-        } else {
-          serversBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public MsgGateServer.Builder getServersBuilder(
-          int index) {
-        return getServersFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public MsgGateServerOrBuilder getServersOrBuilder(
-          int index) {
-        if (serversBuilder_ == null) {
-          return servers_.get(index);  } else {
-          return serversBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public java.util.List<? extends MsgGateServerOrBuilder>
-           getServersOrBuilderList() {
-        if (serversBuilder_ != null) {
-          return serversBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(servers_);
-        }
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public MsgGateServer.Builder addServersBuilder() {
-        return getServersFieldBuilder().addBuilder(
-            MsgGateServer.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public MsgGateServer.Builder addServersBuilder(
-          int index) {
-        return getServersFieldBuilder().addBuilder(
-            index, MsgGateServer.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .MsgGateServer servers = 4;</code>
-       */
-      public java.util.List<MsgGateServer.Builder>
-           getServersBuilderList() {
-        return getServersFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          MsgGateServer, MsgGateServer.Builder, MsgGateServerOrBuilder>
-          getServersFieldBuilder() {
-        if (serversBuilder_ == null) {
-          serversBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              MsgGateServer, MsgGateServer.Builder, MsgGateServerOrBuilder>(
-                  servers_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
-                  getParentForChildren(),
-                  isClean());
-          servers_ = null;
-        }
-        return serversBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:MsgAccountRegistResponse)
@@ -3969,11 +2820,6 @@ public final class AccountMessage {
     // @@protoc_insertion_point(class_scope:MsgAccountRegistResponse)
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_MsgGateServer_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_MsgGateServer_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_MsgAccountLoginRequest_descriptor;
   private static
@@ -4002,19 +2848,16 @@ public final class AccountMessage {
   private static com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    String[] descriptorData = {
-      "\n\025account_message.proto\"7\n\rMsgGateServer" +
-      "\022\014\n\004name\030\001 \002(\t\022\n\n\002ip\030\002 \002(\t\022\014\n\004port\030\003 \002(\005" +
-      "\";\n\026MsgAccountLoginRequest\022\017\n\007account\030\001 " +
-      "\002(\t\022\020\n\010password\030\002 \002(\t\"l\n\027MsgAccountLogin" +
-      "Response\022\017\n\007success\030\001 \002(\010\022\017\n\007retcode\030\002 \002" +
-      "(\005\022\016\n\006authid\030\003 \002(\003\022\037\n\007servers\030\004 \003(\0132\016.Ms" +
-      "gGateServer\"<\n\027MsgAccountRegistRequest\022\017" +
-      "\n\007account\030\001 \002(\t\022\020\n\010password\030\002 \002(\t\"m\n\030Msg" +
-      "AccountRegistResponse\022\017\n\007success\030\001 \002(\010\022\017" +
-      "\n\007retcode\030\002 \002(\005\022\016\n\006authid\030\003 \002(\003\022\037\n\007serve",
-      "rs\030\004 \003(\0132\016.MsgGateServerB\020B\016AccountMessa" +
-      "ge"
+    java.lang.String[] descriptorData = {
+      "\n\025account_message.proto\";\n\026MsgAccountLog" +
+      "inRequest\022\017\n\007account\030\001 \002(\t\022\020\n\010password\030\002" +
+      " \002(\t\"_\n\027MsgAccountLoginResponse\022\017\n\007succe" +
+      "ss\030\001 \002(\010\022\017\n\007retcode\030\002 \002(\005\022\016\n\006authid\030\003 \002(" +
+      "\t\022\022\n\ncurrServId\030\004 \002(\005\"<\n\027MsgAccountRegis" +
+      "tRequest\022\017\n\007account\030\001 \002(\t\022\020\n\010password\030\002 " +
+      "\002(\t\"`\n\030MsgAccountRegistResponse\022\017\n\007succe" +
+      "ss\030\001 \002(\010\022\017\n\007retcode\030\002 \002(\005\022\016\n\006authid\030\003 \002(" +
+      "\t\022\022\n\ncurrServId\030\004 \002(\005B\020B\016AccountMessage"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4028,36 +2871,30 @@ public final class AccountMessage {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_MsgGateServer_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_MsgGateServer_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_MsgGateServer_descriptor,
-        new String[] { "Name", "Ip", "Port", });
     internal_static_MsgAccountLoginRequest_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_MsgAccountLoginRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_MsgAccountLoginRequest_descriptor,
-        new String[] { "Account", "Password", });
+        new java.lang.String[] { "Account", "Password", });
     internal_static_MsgAccountLoginResponse_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_MsgAccountLoginResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_MsgAccountLoginResponse_descriptor,
-        new String[] { "Success", "Retcode", "Authid", "Servers", });
+        new java.lang.String[] { "Success", "Retcode", "Authid", "CurrServId", });
     internal_static_MsgAccountRegistRequest_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_MsgAccountRegistRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_MsgAccountRegistRequest_descriptor,
-        new String[] { "Account", "Password", });
+        new java.lang.String[] { "Account", "Password", });
     internal_static_MsgAccountRegistResponse_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_MsgAccountRegistResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_MsgAccountRegistResponse_descriptor,
-        new String[] { "Success", "Retcode", "Authid", "Servers", });
+        new java.lang.String[] { "Success", "Retcode", "Authid", "CurrServId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

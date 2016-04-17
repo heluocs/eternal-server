@@ -10,7 +10,7 @@ import java.io.Serializable;
  */
 public class Result implements Serializable {
 
-    private static Gson gson = new GsonBuilder().create();
+    private static Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
 
     /** 是否成功 */
     private boolean success;

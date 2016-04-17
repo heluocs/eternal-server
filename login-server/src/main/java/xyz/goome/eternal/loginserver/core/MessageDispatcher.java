@@ -5,7 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import xyz.goome.eternal.common.message.Message;
-import xyz.goome.eternal.common.utils.Constants;
+import xyz.goome.eternal.common.constants.Config;
 import xyz.goome.eternal.loginserver.module.AccountModule;
 
 /**
@@ -27,11 +27,11 @@ public class MessageDispatcher {
     }
 
     public void dispatchModule(Channel channel, int msgno, byte[] msgbody) {
-        int module = msgno >> Constants.BYTE_OFFSET;
+        int module = msgno >> Config.BYTE_OFFSET;
         int action = msgno & 0xffff;
         logger.info("module:{} action:{}", module, action);
         switch(module) {
-            case Message.ACCOUNT_MODULE >> Constants.BYTE_OFFSET:
+            case Message.MSG_ACCOUNT_MODULE >> Config.BYTE_OFFSET:
                 AccountModule.getInstance().dispatchAction(channel, action, msgbody);
                 break;
             default:

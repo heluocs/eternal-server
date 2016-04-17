@@ -1,6 +1,7 @@
 package xyz.goome.eternal.dbserver.dao.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import xyz.goome.eternal.common.entity.Account;
@@ -17,11 +18,20 @@ public class AccountDaoImpl implements AccountDao {
 
     @Override
     public Account getAccount(String account, String password) {
-        return null;
+        String sql = "select * from t_account where account = ? and password = ?";
+        try {
+            return jdbcTemplate.queryForObject(sql, new Object[]{account, password}, BeanPropertyRowMapper.newInstance(Account.class));
+        } catch (Exception e) {
+            return null;
+        }
     }
 
     @Override
-    public Account createAccount(String account, String password) {
-        return null;
+    public int addAccount(Account account) {
+        String sql = "insert into t_account(account, password, authid, createTime) values (?,?,?,?)";
+        return jdbcTemplate.update(sql, new Object[]{account.getAccount(), account.getPassword(),
+            account.getAuthid(), account.getCreateTime()});
     }
+
+
 }

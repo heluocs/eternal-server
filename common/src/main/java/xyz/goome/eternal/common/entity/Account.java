@@ -1,6 +1,7 @@
 package xyz.goome.eternal.common.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 账号信息
@@ -14,9 +15,11 @@ public class Account implements Serializable {
     /**密码*/
     private String password;
     /**认证ID*/
-    private String authId;
-    /**服务器ID*/
-    private Integer serverId;
+    private String authid;
+    /**当前服务器ID*/
+    private Integer currServId;
+    /**注册时间*/
+    private Date createTime;
 
     public Integer getId() {
         return id;
@@ -42,20 +45,27 @@ public class Account implements Serializable {
         this.password = password;
     }
 
-    public String getAuthId() {
-        return authId;
+    public String getAuthid() {
+        return authid;
     }
 
-    public void setAuthId(String authId) {
-        this.authId = authId;
+    public void setAuthid(String authid) {
+        this.authid = authid;
     }
 
-    public Integer getServerId() {
-        return serverId;
+    public Integer getCurrServId() {
+        return currServId;
     }
 
-    public void setServerId(Integer serverId) {
-        this.serverId = serverId;
+    public void setCurrServId(Integer currServId) {
+        this.currServId = currServId;
     }
 
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
 }

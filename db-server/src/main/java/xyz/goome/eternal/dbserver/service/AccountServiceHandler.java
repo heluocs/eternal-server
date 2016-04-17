@@ -8,6 +8,9 @@ import xyz.goome.eternal.common.entity.Account;
 import xyz.goome.eternal.common.entity.Result;
 import xyz.goome.eternal.dbserver.dao.AccountDao;
 
+import java.util.Date;
+import java.util.UUID;
+
 /**
  * Created by matrix on 16/4/9.
  */
@@ -19,12 +22,7 @@ public class AccountServiceHandler implements AccountService.Iface {
 
     @Override
     public String accountLogin(String account, String password) throws TException {
-//        Account obj = accountDao.getAccount(account, password);
-        Account obj = new Account();
-        obj.setAccount(account);
-        obj.setPassword(password);
-        obj.setAuthId("9335");
-        obj.setServerId(1);
+        Account obj = accountDao.getAccount(account, password);
         Result result = new Result();
         if(obj == null) {
             result.setSuccess(false);
@@ -37,13 +35,22 @@ public class AccountServiceHandler implements AccountService.Iface {
 
     @Override
     public String accountRegist(String account, String password) throws TException {
-        Account obj = accountDao.createAccount(account, password);
+        UUID uuid = UUID.randomUUID();
+        String authid = uuid.toString().toLowerCase();
+
+        Account obj = new Account();
+        obj.setAccount(account);
+        obj.setPassword(password);
+        obj.setAuthid(authid);
+        obj.setCreateTime(new Date());
+
+        boolean success = accountDao.addAccount(obj) > 0;
         Result result = new Result();
-        if(obj == null) {
-            result.setSuccess(false);
-        } else {
+        if(success) {
             result.setSuccess(true);
-            result.setData(obj);
+            result.setData(authid);
+        } else {
+            result.setSuccess(false);
         }
         return result.toString();
     }

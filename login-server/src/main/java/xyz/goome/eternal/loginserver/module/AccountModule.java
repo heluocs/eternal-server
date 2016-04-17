@@ -2,7 +2,8 @@ package xyz.goome.eternal.loginserver.module;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.google.protobuf.InvalidProtocolBufferException;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
@@ -11,12 +12,14 @@ import org.apache.thrift.TException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
+import xyz.goome.eternal.common.constants.Config;
+import xyz.goome.eternal.common.constants.ErrorCode;
 import xyz.goome.eternal.common.entity.Account;
 import xyz.goome.eternal.common.entity.Result;
+import xyz.goome.eternal.common.message.AccountMessage;
 import xyz.goome.eternal.common.message.Message;
 import xyz.goome.eternal.common.service.AccountService;
 import xyz.goome.eternal.common.utils.ByteUtil;
-import xyz.goome.eternal.common.message.AccountMessage;
 import xyz.goome.eternal.loginserver.rpc.ThriftClient;
 import xyz.goome.eternal.loginserver.utils.SpringContextUtil;
 
@@ -28,7 +31,7 @@ public class AccountModule {
 
     private Logger logger = LoggerFactory.getLogger(AccountModule.class);
 
-    private static Gson gson = new GsonBuilder().create();
+    private static Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
 
     private static AccountModule instance = new AccountModule();
 
@@ -71,7 +74,6 @@ public class AccountModule {
         logger.info("account:{} password:{}", account, password);
 
         ThriftClient thriftClient = (ThriftClient) SpringContextUtil.getBean("thriftClient");
-        //调用登录服务
         AccountService.Client accountService = (AccountService.Client)thriftClient.getClient("AccountService");
         String jsonResult = null;
         try {
@@ -80,23 +82,30 @@ public class AccountModule {
             e.printStackTrace();
         }
         System.out.println(jsonResult);
-        Result result = gson.fromJson(jsonResult, Result.class);
-        Account acc = gson.fromJson(result.getData().toString(), Account.class);
+        JsonObject jsonObject = new JsonParser().parse(jsonResult).getAsJsonObject();
+
+        boolean success = jsonObject.get("success").getAsBoolean();
+        JsonObject data = jsonObject.get("data").getAsJsonObject();
+        String authid = data.get("authid").getAsString();
+        int currServId = data.get("currServId").getAsInt();
 
         AccountMessage.MsgAccountLoginResponse.Builder builder = AccountMessage.MsgAccountLoginResponse.newBuilder();
-        builder.setAuthid(Integer.valueOf(acc.getAuthId()));
-        builder.setRetcode(101);
+        builder.setAuthid(authid);
+        builder.setCurrServId(currServId);
+        builder.setRetcode(ErrorCode.COMMON_SUCCESS);
         builder.setSuccess(true);
 
+        /*
         AccountMessage.MsgGateServer.Builder gateserver = AccountMessage.MsgGateServer.newBuilder();
         gateserver.setName("青龙");
         gateserver.setIp("127.0.0.1");
         gateserver.setPort(8888);
         builder.addServers(gateserver);
+        */
 
         byte[] respbody = builder.build().toByteArray();
         byte[] msgno = ByteUtil.int2byte(Message.MSG_ACCOUNT_LOGIN_RESPONSE_S2C);
-        short msglen = (short) (2 + msgno.length + respbody.length);
+        short msglen = (short) (Config.MSG_LENGTH + msgno.length + respbody.length);
 
         ByteBuf byteBuf = Unpooled.buffer(msglen);
         byteBuf.writeBytes(ByteUtil.short2byte(msglen));
@@ -122,7 +131,44 @@ public class AccountModule {
      * @param msgbody
      */
     private void onAccountRegistRequest(Channel channel, byte[] msgbody) {
-        //doAccountRegistResponse(channel, msgbody);
+        AccountMessage.MsgAccountRegistRequest request = null;
+        try {
+            request = AccountMessage.MsgAccountRegistRequest.parseFrom(msgbody);
+        } catch (InvalidProtocolBufferException e) {
+            e.printStackTrace();
+        }
+
+        String account = request.getAccount();
+        String password = request.getPassword();
+
+        ThriftClient thriftClient = (ThriftClient) SpringContextUtil.getBean("thriftClient");
+        AccountService.Client accountService = (AccountService.Client)thriftClient.getClient("AccountService");
+        String jsonResult = null;
+        try {
+            jsonResult = accountService.accountRegist(account, password);
+        } catch (TException e) {
+            e.printStackTrace();
+        }
+        System.out.println(jsonResult);
+        Result result = gson.fromJson(jsonResult, Result.class);
+        String authid = result.getData().toString();
+
+        AccountMessage.MsgAccountRegistResponse.Builder builder = AccountMessage.MsgAccountRegistResponse.newBuilder();
+        builder.setAuthid(authid);
+        builder.setCurrServId(0);
+        builder.setRetcode(ErrorCode.COMMON_SUCCESS);
+        builder.setSuccess(true);
+
+        byte[] respbody = builder.build().toByteArray();
+        byte[] msgno = ByteUtil.int2byte(Message.MSG_ACCOUNT_REGIST_RESPONSE_S2C);
+        short msglen = (short) (Config.MSG_LENGTH + msgno.length + respbody.length);
+
+        ByteBuf byteBuf = Unpooled.buffer(msglen);
+        byteBuf.writeBytes(ByteUtil.short2byte(msglen));
+        byteBuf.writeBytes(msgno);
+        byteBuf.writeBytes(respbody);
+
+        doAccountRegistResponse(channel, byteBuf);
     }
 
     /**

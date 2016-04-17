@@ -32,10 +32,12 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
 
         AccountMessage.MsgAccountLoginResponse response = AccountMessage.MsgAccountLoginResponse.parseFrom(content);
         System.out.println(response.getAuthid());
+        /*
         List<AccountMessage.MsgGateServer> gates = response.getServersList();
         for(AccountMessage.MsgGateServer gate : gates) {
             System.out.println(gate.getName() + " " + gate.getIp() + ":" + gate.getPort());
         }
+        */
     }
 
     @Override

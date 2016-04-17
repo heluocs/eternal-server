@@ -1,0 +1,19 @@
+option java_outer_classname = "ServerMessage";
+
+message MsgServer
+{
+    required int32 serverid             = 1;
+    required string name				= 2;
+    required string ip					= 3;
+    required int32 port					= 4;
+}
+
+//MSG_SEVER_LIST_REQUEST_C2S
+message MsgServerListRequest {
+
+}
+
+//MSG_SERVER_LIST_RESPONSE_S2C
+message MsgServerListResponse {
+    repeated MsgServer servers          = 1;
+}
