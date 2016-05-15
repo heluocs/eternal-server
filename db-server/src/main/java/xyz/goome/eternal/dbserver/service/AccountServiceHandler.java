@@ -44,7 +44,7 @@ public class AccountServiceHandler implements AccountService.Iface {
         obj.setAuthid(authid);
         obj.setCreateTime(new Date());
 
-        boolean success = accountDao.addAccount(obj) > 0;
+        boolean success = accountDao.addAccount(obj);
         Result result = new Result();
         if(success) {
             result.setSuccess(true);

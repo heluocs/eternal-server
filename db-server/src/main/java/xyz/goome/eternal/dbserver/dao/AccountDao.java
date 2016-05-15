@@ -20,6 +20,6 @@ public interface AccountDao {
      * @param account
      * @return
      */
-    public int addAccount(Account account);
+    public boolean addAccount(Account account);
 
 }
