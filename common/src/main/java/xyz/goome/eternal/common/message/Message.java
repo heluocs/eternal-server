@@ -8,8 +8,8 @@ public class Message {
     public static final int MSG_ACCOUNT_MODULE                          = 0x00010000;
     public static final int MSG_ACCOUNT_LOGIN_REQUEST_C2S               = 0x00010001;
     public static final int MSG_ACCOUNT_LOGIN_RESPONSE_S2C              = 0x00010002;
-    public static final int MSG_ACCOUNT_REGIST_REQUEST_C2S              = 0x00010003;
-    public static final int MSG_ACCOUNT_REGIST_RESPONSE_S2C             = 0x00010004;
+    public static final int MSG_ACCOUNT_REGISTER_REQUEST_C2S            = 0x00010003;
+    public static final int MSG_ACCOUNT_REGISTER_RESPONSE_S2C           = 0x00010004;
 
     public static final int MSG_ROLE_MODULE                             = 0x00020000;
     public static final int MSG_ROLE_LIST_REQUEST_C2S                   = 0x00020001;

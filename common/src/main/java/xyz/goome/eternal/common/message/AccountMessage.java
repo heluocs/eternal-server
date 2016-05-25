@@ -1413,8 +1413,8 @@ public final class AccountMessage {
     // @@protoc_insertion_point(class_scope:MsgAccountLoginResponse)
   }
 
-  public interface MsgAccountRegistRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:MsgAccountRegistRequest)
+  public interface MsgAccountRegisterRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:MsgAccountRegisterRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1446,29 +1446,29 @@ public final class AccountMessage {
         getPasswordBytes();
   }
   /**
-   * Protobuf type {@code MsgAccountRegistRequest}
+   * Protobuf type {@code MsgAccountRegisterRequest}
    *
    * <pre>
-   *MSG_ACCOUNT_REGIST_REQUEST_C2S
+   *MSG_ACCOUNT_REGISTER_REQUEST_C2S
    * </pre>
    */
-  public static final class MsgAccountRegistRequest extends
+  public static final class MsgAccountRegisterRequest extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:MsgAccountRegistRequest)
-      MsgAccountRegistRequestOrBuilder {
-    // Use MsgAccountRegistRequest.newBuilder() to construct.
-    private MsgAccountRegistRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:MsgAccountRegisterRequest)
+      MsgAccountRegisterRequestOrBuilder {
+    // Use MsgAccountRegisterRequest.newBuilder() to construct.
+    private MsgAccountRegisterRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private MsgAccountRegistRequest(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private MsgAccountRegisterRequest(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final MsgAccountRegistRequest defaultInstance;
-    public static MsgAccountRegistRequest getDefaultInstance() {
+    private static final MsgAccountRegisterRequest defaultInstance;
+    public static MsgAccountRegisterRequest getDefaultInstance() {
       return defaultInstance;
     }
 
-    public MsgAccountRegistRequest getDefaultInstanceForType() {
+    public MsgAccountRegisterRequest getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -1478,7 +1478,7 @@ public final class AccountMessage {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private MsgAccountRegistRequest(
+    private MsgAccountRegisterRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1527,28 +1527,28 @@ public final class AccountMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return AccountMessage.internal_static_MsgAccountRegistRequest_descriptor;
+      return AccountMessage.internal_static_MsgAccountRegisterRequest_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return AccountMessage.internal_static_MsgAccountRegistRequest_fieldAccessorTable
+      return AccountMessage.internal_static_MsgAccountRegisterRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              AccountMessage.MsgAccountRegistRequest.class, AccountMessage.MsgAccountRegistRequest.Builder.class);
+              AccountMessage.MsgAccountRegisterRequest.class, AccountMessage.MsgAccountRegisterRequest.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<MsgAccountRegistRequest> PARSER =
-        new com.google.protobuf.AbstractParser<MsgAccountRegistRequest>() {
-      public MsgAccountRegistRequest parsePartialFrom(
+    public static com.google.protobuf.Parser<MsgAccountRegisterRequest> PARSER =
+        new com.google.protobuf.AbstractParser<MsgAccountRegisterRequest>() {
+      public MsgAccountRegisterRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new MsgAccountRegistRequest(input, extensionRegistry);
+        return new MsgAccountRegisterRequest(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<MsgAccountRegistRequest> getParserForType() {
+    public com.google.protobuf.Parser<MsgAccountRegisterRequest> getParserForType() {
       return PARSER;
     }
 
@@ -1697,53 +1697,53 @@ public final class AccountMessage {
       return super.writeReplace();
     }
 
-    public static AccountMessage.MsgAccountRegistRequest parseFrom(
+    public static AccountMessage.MsgAccountRegisterRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static AccountMessage.MsgAccountRegistRequest parseFrom(
+    public static AccountMessage.MsgAccountRegisterRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static AccountMessage.MsgAccountRegistRequest parseFrom(byte[] data)
+    public static AccountMessage.MsgAccountRegisterRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static AccountMessage.MsgAccountRegistRequest parseFrom(
+    public static AccountMessage.MsgAccountRegisterRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static AccountMessage.MsgAccountRegistRequest parseFrom(java.io.InputStream input)
+    public static AccountMessage.MsgAccountRegisterRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static AccountMessage.MsgAccountRegistRequest parseFrom(
+    public static AccountMessage.MsgAccountRegisterRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static AccountMessage.MsgAccountRegistRequest parseDelimitedFrom(java.io.InputStream input)
+    public static AccountMessage.MsgAccountRegisterRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static AccountMessage.MsgAccountRegistRequest parseDelimitedFrom(
+    public static AccountMessage.MsgAccountRegisterRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static AccountMessage.MsgAccountRegistRequest parseFrom(
+    public static AccountMessage.MsgAccountRegisterRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static AccountMessage.MsgAccountRegistRequest parseFrom(
+    public static AccountMessage.MsgAccountRegisterRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1752,7 +1752,7 @@ public final class AccountMessage {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(AccountMessage.MsgAccountRegistRequest prototype) {
+    public static Builder newBuilder(AccountMessage.MsgAccountRegisterRequest prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -1764,29 +1764,29 @@ public final class AccountMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code MsgAccountRegistRequest}
+     * Protobuf type {@code MsgAccountRegisterRequest}
      *
      * <pre>
-     *MSG_ACCOUNT_REGIST_REQUEST_C2S
+     *MSG_ACCOUNT_REGISTER_REQUEST_C2S
      * </pre>
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:MsgAccountRegistRequest)
-        AccountMessage.MsgAccountRegistRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:MsgAccountRegisterRequest)
+        AccountMessage.MsgAccountRegisterRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return AccountMessage.internal_static_MsgAccountRegistRequest_descriptor;
+        return AccountMessage.internal_static_MsgAccountRegisterRequest_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return AccountMessage.internal_static_MsgAccountRegistRequest_fieldAccessorTable
+        return AccountMessage.internal_static_MsgAccountRegisterRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                AccountMessage.MsgAccountRegistRequest.class, AccountMessage.MsgAccountRegistRequest.Builder.class);
+                AccountMessage.MsgAccountRegisterRequest.class, AccountMessage.MsgAccountRegisterRequest.Builder.class);
       }
 
-      // Construct using AccountMessage.MsgAccountRegistRequest.newBuilder()
+      // Construct using AccountMessage.MsgAccountRegisterRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1819,23 +1819,23 @@ public final class AccountMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return AccountMessage.internal_static_MsgAccountRegistRequest_descriptor;
+        return AccountMessage.internal_static_MsgAccountRegisterRequest_descriptor;
       }
 
-      public AccountMessage.MsgAccountRegistRequest getDefaultInstanceForType() {
-        return AccountMessage.MsgAccountRegistRequest.getDefaultInstance();
+      public AccountMessage.MsgAccountRegisterRequest getDefaultInstanceForType() {
+        return AccountMessage.MsgAccountRegisterRequest.getDefaultInstance();
       }
 
-      public AccountMessage.MsgAccountRegistRequest build() {
-        AccountMessage.MsgAccountRegistRequest result = buildPartial();
+      public AccountMessage.MsgAccountRegisterRequest build() {
+        AccountMessage.MsgAccountRegisterRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public AccountMessage.MsgAccountRegistRequest buildPartial() {
-        AccountMessage.MsgAccountRegistRequest result = new AccountMessage.MsgAccountRegistRequest(this);
+      public AccountMessage.MsgAccountRegisterRequest buildPartial() {
+        AccountMessage.MsgAccountRegisterRequest result = new AccountMessage.MsgAccountRegisterRequest(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1852,16 +1852,16 @@ public final class AccountMessage {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof AccountMessage.MsgAccountRegistRequest) {
-          return mergeFrom((AccountMessage.MsgAccountRegistRequest)other);
+        if (other instanceof AccountMessage.MsgAccountRegisterRequest) {
+          return mergeFrom((AccountMessage.MsgAccountRegisterRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(AccountMessage.MsgAccountRegistRequest other) {
-        if (other == AccountMessage.MsgAccountRegistRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(AccountMessage.MsgAccountRegisterRequest other) {
+        if (other == AccountMessage.MsgAccountRegisterRequest.getDefaultInstance()) return this;
         if (other.hasAccount()) {
           bitField0_ |= 0x00000001;
           account_ = other.account_;
@@ -1892,11 +1892,11 @@ public final class AccountMessage {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        AccountMessage.MsgAccountRegistRequest parsedMessage = null;
+        AccountMessage.MsgAccountRegisterRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (AccountMessage.MsgAccountRegistRequest) e.getUnfinishedMessage();
+          parsedMessage = (AccountMessage.MsgAccountRegisterRequest) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -2059,19 +2059,19 @@ public final class AccountMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:MsgAccountRegistRequest)
+      // @@protoc_insertion_point(builder_scope:MsgAccountRegisterRequest)
     }
 
     static {
-      defaultInstance = new MsgAccountRegistRequest(true);
+      defaultInstance = new MsgAccountRegisterRequest(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:MsgAccountRegistRequest)
+    // @@protoc_insertion_point(class_scope:MsgAccountRegisterRequest)
   }
 
-  public interface MsgAccountRegistResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:MsgAccountRegistResponse)
+  public interface MsgAccountRegisterResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:MsgAccountRegisterResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2116,29 +2116,29 @@ public final class AccountMessage {
     int getCurrServId();
   }
   /**
-   * Protobuf type {@code MsgAccountRegistResponse}
+   * Protobuf type {@code MsgAccountRegisterResponse}
    *
    * <pre>
-   *MSG_ACCOUNT_REGIST_RESPONSE_S2C
+   *MSG_ACCOUNT_REGISTER_RESPONSE_S2C
    * </pre>
    */
-  public static final class MsgAccountRegistResponse extends
+  public static final class MsgAccountRegisterResponse extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:MsgAccountRegistResponse)
-      MsgAccountRegistResponseOrBuilder {
-    // Use MsgAccountRegistResponse.newBuilder() to construct.
-    private MsgAccountRegistResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:MsgAccountRegisterResponse)
+      MsgAccountRegisterResponseOrBuilder {
+    // Use MsgAccountRegisterResponse.newBuilder() to construct.
+    private MsgAccountRegisterResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private MsgAccountRegistResponse(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private MsgAccountRegisterResponse(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final MsgAccountRegistResponse defaultInstance;
-    public static MsgAccountRegistResponse getDefaultInstance() {
+    private static final MsgAccountRegisterResponse defaultInstance;
+    public static MsgAccountRegisterResponse getDefaultInstance() {
       return defaultInstance;
     }
 
-    public MsgAccountRegistResponse getDefaultInstanceForType() {
+    public MsgAccountRegisterResponse getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -2148,7 +2148,7 @@ public final class AccountMessage {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private MsgAccountRegistResponse(
+    private MsgAccountRegisterResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2206,28 +2206,28 @@ public final class AccountMessage {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return AccountMessage.internal_static_MsgAccountRegistResponse_descriptor;
+      return AccountMessage.internal_static_MsgAccountRegisterResponse_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return AccountMessage.internal_static_MsgAccountRegistResponse_fieldAccessorTable
+      return AccountMessage.internal_static_MsgAccountRegisterResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              AccountMessage.MsgAccountRegistResponse.class, AccountMessage.MsgAccountRegistResponse.Builder.class);
+              AccountMessage.MsgAccountRegisterResponse.class, AccountMessage.MsgAccountRegisterResponse.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<MsgAccountRegistResponse> PARSER =
-        new com.google.protobuf.AbstractParser<MsgAccountRegistResponse>() {
-      public MsgAccountRegistResponse parsePartialFrom(
+    public static com.google.protobuf.Parser<MsgAccountRegisterResponse> PARSER =
+        new com.google.protobuf.AbstractParser<MsgAccountRegisterResponse>() {
+      public MsgAccountRegisterResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new MsgAccountRegistResponse(input, extensionRegistry);
+        return new MsgAccountRegisterResponse(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<MsgAccountRegistResponse> getParserForType() {
+    public com.google.protobuf.Parser<MsgAccountRegisterResponse> getParserForType() {
       return PARSER;
     }
 
@@ -2403,53 +2403,53 @@ public final class AccountMessage {
       return super.writeReplace();
     }
 
-    public static AccountMessage.MsgAccountRegistResponse parseFrom(
+    public static AccountMessage.MsgAccountRegisterResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static AccountMessage.MsgAccountRegistResponse parseFrom(
+    public static AccountMessage.MsgAccountRegisterResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static AccountMessage.MsgAccountRegistResponse parseFrom(byte[] data)
+    public static AccountMessage.MsgAccountRegisterResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static AccountMessage.MsgAccountRegistResponse parseFrom(
+    public static AccountMessage.MsgAccountRegisterResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static AccountMessage.MsgAccountRegistResponse parseFrom(java.io.InputStream input)
+    public static AccountMessage.MsgAccountRegisterResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static AccountMessage.MsgAccountRegistResponse parseFrom(
+    public static AccountMessage.MsgAccountRegisterResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static AccountMessage.MsgAccountRegistResponse parseDelimitedFrom(java.io.InputStream input)
+    public static AccountMessage.MsgAccountRegisterResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static AccountMessage.MsgAccountRegistResponse parseDelimitedFrom(
+    public static AccountMessage.MsgAccountRegisterResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static AccountMessage.MsgAccountRegistResponse parseFrom(
+    public static AccountMessage.MsgAccountRegisterResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static AccountMessage.MsgAccountRegistResponse parseFrom(
+    public static AccountMessage.MsgAccountRegisterResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2458,7 +2458,7 @@ public final class AccountMessage {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(AccountMessage.MsgAccountRegistResponse prototype) {
+    public static Builder newBuilder(AccountMessage.MsgAccountRegisterResponse prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -2470,29 +2470,29 @@ public final class AccountMessage {
       return builder;
     }
     /**
-     * Protobuf type {@code MsgAccountRegistResponse}
+     * Protobuf type {@code MsgAccountRegisterResponse}
      *
      * <pre>
-     *MSG_ACCOUNT_REGIST_RESPONSE_S2C
+     *MSG_ACCOUNT_REGISTER_RESPONSE_S2C
      * </pre>
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:MsgAccountRegistResponse)
-        AccountMessage.MsgAccountRegistResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:MsgAccountRegisterResponse)
+        AccountMessage.MsgAccountRegisterResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return AccountMessage.internal_static_MsgAccountRegistResponse_descriptor;
+        return AccountMessage.internal_static_MsgAccountRegisterResponse_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return AccountMessage.internal_static_MsgAccountRegistResponse_fieldAccessorTable
+        return AccountMessage.internal_static_MsgAccountRegisterResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                AccountMessage.MsgAccountRegistResponse.class, AccountMessage.MsgAccountRegistResponse.Builder.class);
+                AccountMessage.MsgAccountRegisterResponse.class, AccountMessage.MsgAccountRegisterResponse.Builder.class);
       }
 
-      // Construct using AccountMessage.MsgAccountRegistResponse.newBuilder()
+      // Construct using AccountMessage.MsgAccountRegisterResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2529,23 +2529,23 @@ public final class AccountMessage {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return AccountMessage.internal_static_MsgAccountRegistResponse_descriptor;
+        return AccountMessage.internal_static_MsgAccountRegisterResponse_descriptor;
       }
 
-      public AccountMessage.MsgAccountRegistResponse getDefaultInstanceForType() {
-        return AccountMessage.MsgAccountRegistResponse.getDefaultInstance();
+      public AccountMessage.MsgAccountRegisterResponse getDefaultInstanceForType() {
+        return AccountMessage.MsgAccountRegisterResponse.getDefaultInstance();
       }
 
-      public AccountMessage.MsgAccountRegistResponse build() {
-        AccountMessage.MsgAccountRegistResponse result = buildPartial();
+      public AccountMessage.MsgAccountRegisterResponse build() {
+        AccountMessage.MsgAccountRegisterResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public AccountMessage.MsgAccountRegistResponse buildPartial() {
-        AccountMessage.MsgAccountRegistResponse result = new AccountMessage.MsgAccountRegistResponse(this);
+      public AccountMessage.MsgAccountRegisterResponse buildPartial() {
+        AccountMessage.MsgAccountRegisterResponse result = new AccountMessage.MsgAccountRegisterResponse(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -2570,16 +2570,16 @@ public final class AccountMessage {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof AccountMessage.MsgAccountRegistResponse) {
-          return mergeFrom((AccountMessage.MsgAccountRegistResponse)other);
+        if (other instanceof AccountMessage.MsgAccountRegisterResponse) {
+          return mergeFrom((AccountMessage.MsgAccountRegisterResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(AccountMessage.MsgAccountRegistResponse other) {
-        if (other == AccountMessage.MsgAccountRegistResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(AccountMessage.MsgAccountRegisterResponse other) {
+        if (other == AccountMessage.MsgAccountRegisterResponse.getDefaultInstance()) return this;
         if (other.hasSuccess()) {
           setSuccess(other.getSuccess());
         }
@@ -2622,11 +2622,11 @@ public final class AccountMessage {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        AccountMessage.MsgAccountRegistResponse parsedMessage = null;
+        AccountMessage.MsgAccountRegisterResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (AccountMessage.MsgAccountRegistResponse) e.getUnfinishedMessage();
+          parsedMessage = (AccountMessage.MsgAccountRegisterResponse) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -2809,15 +2809,15 @@ public final class AccountMessage {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:MsgAccountRegistResponse)
+      // @@protoc_insertion_point(builder_scope:MsgAccountRegisterResponse)
     }
 
     static {
-      defaultInstance = new MsgAccountRegistResponse(true);
+      defaultInstance = new MsgAccountRegisterResponse(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:MsgAccountRegistResponse)
+    // @@protoc_insertion_point(class_scope:MsgAccountRegisterResponse)
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
@@ -2831,15 +2831,15 @@ public final class AccountMessage {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_MsgAccountLoginResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_MsgAccountRegistRequest_descriptor;
+    internal_static_MsgAccountRegisterRequest_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_MsgAccountRegistRequest_fieldAccessorTable;
+      internal_static_MsgAccountRegisterRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_MsgAccountRegistResponse_descriptor;
+    internal_static_MsgAccountRegisterResponse_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_MsgAccountRegistResponse_fieldAccessorTable;
+      internal_static_MsgAccountRegisterResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2853,11 +2853,12 @@ public final class AccountMessage {
       "inRequest\022\017\n\007account\030\001 \002(\t\022\020\n\010password\030\002" +
       " \002(\t\"_\n\027MsgAccountLoginResponse\022\017\n\007succe" +
       "ss\030\001 \002(\010\022\017\n\007retcode\030\002 \002(\005\022\016\n\006authid\030\003 \002(" +
-      "\t\022\022\n\ncurrServId\030\004 \002(\005\"<\n\027MsgAccountRegis" +
-      "tRequest\022\017\n\007account\030\001 \002(\t\022\020\n\010password\030\002 " +
-      "\002(\t\"`\n\030MsgAccountRegistResponse\022\017\n\007succe" +
-      "ss\030\001 \002(\010\022\017\n\007retcode\030\002 \002(\005\022\016\n\006authid\030\003 \002(" +
-      "\t\022\022\n\ncurrServId\030\004 \002(\005B\020B\016AccountMessage"
+      "\t\022\022\n\ncurrServId\030\004 \002(\005\">\n\031MsgAccountRegis" +
+      "terRequest\022\017\n\007account\030\001 \002(\t\022\020\n\010password\030" +
+      "\002 \002(\t\"b\n\032MsgAccountRegisterResponse\022\017\n\007s" +
+      "uccess\030\001 \002(\010\022\017\n\007retcode\030\002 \002(\005\022\016\n\006authid\030" +
+      "\003 \002(\t\022\022\n\ncurrServId\030\004 \002(\005B\020B\016AccountMess" +
+      "age"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2883,17 +2884,17 @@ public final class AccountMessage {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_MsgAccountLoginResponse_descriptor,
         new java.lang.String[] { "Success", "Retcode", "Authid", "CurrServId", });
-    internal_static_MsgAccountRegistRequest_descriptor =
+    internal_static_MsgAccountRegisterRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_MsgAccountRegistRequest_fieldAccessorTable = new
+    internal_static_MsgAccountRegisterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_MsgAccountRegistRequest_descriptor,
+        internal_static_MsgAccountRegisterRequest_descriptor,
         new java.lang.String[] { "Account", "Password", });
-    internal_static_MsgAccountRegistResponse_descriptor =
+    internal_static_MsgAccountRegisterResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_MsgAccountRegistResponse_fieldAccessorTable = new
+    internal_static_MsgAccountRegisterResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_MsgAccountRegistResponse_descriptor,
+        internal_static_MsgAccountRegisterResponse_descriptor,
         new java.lang.String[] { "Success", "Retcode", "Authid", "CurrServId", });
   }
 

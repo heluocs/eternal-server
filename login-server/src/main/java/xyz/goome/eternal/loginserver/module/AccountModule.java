@@ -44,8 +44,8 @@ public class AccountModule {
             case Message.MSG_ACCOUNT_LOGIN_REQUEST_C2S & 0xffff:
                 onAccountLoginRequest(channel, msgbody);
                 break;
-            case Message.MSG_ACCOUNT_REGIST_REQUEST_C2S & 0xffff:
-                onAccountRegistRequest(channel, msgbody);
+            case Message.MSG_ACCOUNT_REGISTER_REQUEST_C2S & 0xffff:
+                onAccountRegisterRequest(channel, msgbody);
                 break;
             default:
                 break;
@@ -130,10 +130,10 @@ public class AccountModule {
      * @param channel
      * @param msgbody
      */
-    private void onAccountRegistRequest(Channel channel, byte[] msgbody) {
-        AccountMessage.MsgAccountRegistRequest request = null;
+    private void onAccountRegisterRequest(Channel channel, byte[] msgbody) {
+        AccountMessage.MsgAccountRegisterRequest request = null;
         try {
-            request = AccountMessage.MsgAccountRegistRequest.parseFrom(msgbody);
+            request = AccountMessage.MsgAccountRegisterRequest.parseFrom(msgbody);
         } catch (InvalidProtocolBufferException e) {
             e.printStackTrace();
         }
@@ -153,14 +153,14 @@ public class AccountModule {
         Result result = gson.fromJson(jsonResult, Result.class);
         String authid = result.getData().toString();
 
-        AccountMessage.MsgAccountRegistResponse.Builder builder = AccountMessage.MsgAccountRegistResponse.newBuilder();
+        AccountMessage.MsgAccountRegisterResponse.Builder builder = AccountMessage.MsgAccountRegisterResponse.newBuilder();
         builder.setAuthid(authid);
         builder.setCurrServId(0);
         builder.setRetcode(ErrorCode.COMMON_SUCCESS);
         builder.setSuccess(true);
 
         byte[] respbody = builder.build().toByteArray();
-        byte[] msgno = ByteUtil.int2byte(Message.MSG_ACCOUNT_REGIST_RESPONSE_S2C);
+        byte[] msgno = ByteUtil.int2byte(Message.MSG_ACCOUNT_REGISTER_RESPONSE_S2C);
         short msglen = (short) (Config.MSG_LENGTH + msgno.length + respbody.length);
 
         ByteBuf byteBuf = Unpooled.buffer(msglen);
@@ -168,7 +168,7 @@ public class AccountModule {
         byteBuf.writeBytes(msgno);
         byteBuf.writeBytes(respbody);
 
-        doAccountRegistResponse(channel, byteBuf);
+        doAccountRegisterResponse(channel, byteBuf);
     }
 
     /**
@@ -176,7 +176,7 @@ public class AccountModule {
      * @param channel
      * @param byteBuf
      */
-    private void doAccountRegistResponse(Channel channel, ByteBuf byteBuf) {
+    private void doAccountRegisterResponse(Channel channel, ByteBuf byteBuf) {
         channel.writeAndFlush(byteBuf);
     }
 }

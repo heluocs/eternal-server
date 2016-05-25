@@ -16,15 +16,15 @@ message MsgAccountLoginResponse
     required int32 currServId           = 4;
 }
 
-//MSG_ACCOUNT_REGIST_REQUEST_C2S
-message MsgAccountRegistRequest
+//MSG_ACCOUNT_REGISTER_REQUEST_C2S
+message MsgAccountRegisterRequest
 {
 	required string account 			= 1;
 	required string password			= 2;
 }
 
-//MSG_ACCOUNT_REGIST_RESPONSE_S2C
-message MsgAccountRegistResponse
+//MSG_ACCOUNT_REGISTER_RESPONSE_S2C
+message MsgAccountRegisterResponse
 {
 	required bool success				= 1;
 	required int32 retcode				= 2;

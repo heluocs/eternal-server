@@ -33,9 +33,10 @@ public class AccountDaoImpl implements AccountDao {
         MongoCursor cursor = collection.find(bsonDocument).iterator();
         while (cursor.hasNext()) {
             Document doc = (Document) cursor.next();
+            //TODO
             Account obj = gson.fromJson(doc.toJson(), Account.class);
             System.out.println("find document: " + cursor.next());
-
+            return obj;
         }
         return null;
     }
